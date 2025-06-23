@@ -44,9 +44,9 @@ const experience = [
 ];
 
 const currentLearning = [
-	{ label: 'AI & Machine Learning', icon: <FaRobot className="text-pink-500 text-xl animate-bounce" />, img: '/images/ai.png' },
-	{ label: 'Cloud DevOps (AWS, Azure)', icon: <FaCloud className="text-blue-400 text-xl animate-spin-slow" />, img: '/images/cloud.png' },
-	{ label: '3D Web (Three.js, React Three Fiber)', icon: <FaGlobe className="text-green-500 text-xl animate-pulse" />, img: '/images/3dweb.png' },
+	{ label: 'Advance web Developing', icon: <FaRobot className="text-pink-500 text-xl animate-bounce" />, img: '/images/ai.png' },
+	// { label: 'Cloud DevOps (AWS, Azure)', icon: <FaCloud className="text-blue-400 text-xl animate-spin-slow" />, img: '/images/cloud.png' },
+	{ label: '3D Web (tailwind css,Three.js, React Three Fiber)', icon: <FaGlobe className="text-green-500 text-xl animate-pulse" />, img: '/images/3dweb.png' },
 	{ label: 'Advanced TypeScript', icon: <FaCertificate className="text-yellow-500 text-xl animate-bounce" />, img: '/images/typescript.png' },
 ];
 

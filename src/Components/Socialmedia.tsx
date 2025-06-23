@@ -21,6 +21,12 @@ const socialLinks = [
     icon: <FaInstagram size={40} />,
     desc: "Follow me on Instagram for creative and personal updates.",
   },
+  {
+    name: "Youtube",
+    url: "https://instagram.com/yourhandle",
+    icon: <FaInstagram size={40} />,
+    desc: "Subscrive me on Youtube for Coding contents.",
+  },
 ];
 
 const Socialmedia = () => (
