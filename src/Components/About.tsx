@@ -1,6 +1,6 @@
 import '../about-animations.css';
 import './About.css'; // Import the new CSS file
-import profileImg from '../assets/profileImg';
+import profileImg from '../assets/IMG_Raj.jpg'; // Correct import
 
 const skills = [
   { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
@@ -41,7 +41,7 @@ const About = () => (
       </div>
       {/* Profile image for desktop */}
       <div className="hidden md:flex flex-1 justify-center w-full about-fade-in">
-        <img src="src\assets\IMG_Raj.jpg" alt="Profile" className="w-57 h-57 rounded-full object-cover profile-img-animate border-4 border-blue-100 dark:border-blue-800" />
+        <img src={profileImg} alt="Profile" className="w-57 h-57 rounded-full object-cover profile-img-animate border-4 border-blue-100 dark:border-blue-800" />
       </div>
     </div>
   </section>
