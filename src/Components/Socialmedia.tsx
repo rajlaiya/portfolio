@@ -37,7 +37,7 @@ const Socialmedia = () => (
     </div>
     <h2 className="text-4xl font-extrabold mb-12 text-blue-700 dark:text-blue-300 text-center drop-shadow-lg">Social Media</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-5xl px-4">
-      {socialLinks.map((link, idx) => (
+      {socialLinks.map((link) => (
         <a
           key={link.name}
           href={link.url}
