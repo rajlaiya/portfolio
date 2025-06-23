@@ -5,9 +5,9 @@ const projects = [
 	{
 		title: 'Intern Management Portal',
 		description:
-			'A fullstack productivity app for managing tasks and teams, featuring real-time updates, Kanban board, and analytics dashboard.',
+			'A web application for managing intern applications, including form submission, validation, and data storage.',
 		tech: ['Html', 'typescript', 'CSS'],
-		github: '#',
+		github: 'https://github.com/rajlaiya/INTERN_FORM_USING-JS-TS',
 		image:
 			'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D',
 		live: 'https://rajlaiya.github.io/INTERN_FORM_USING-JS-TS/',
@@ -19,7 +19,7 @@ const projects = [
 		description:
 			'A scalable e-commerce platform with secure payments, admin dashboard, and product recommendations.',
 		tech: ['Vuejs', 'Vite', 'Vuetify', 'typescript', 'EmailJS'],
-		github: '#',
+		github: 'https://github.com/rajlaiya/Shopwow',
 		image:
 			'https://plus.unsplash.com/premium_photo-1681488350342-19084ba8e224?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZSUyMGNvbW1lcmNlfGVufDB8fDB8fHww',
 		live: 'https://rajlaiya.github.io/Shopwow/',
@@ -32,6 +32,7 @@ const projects = [
 			'A modern portfolio website template for developers, with dark mode, animations, and easy customization.',
 		tech: [
 			'React',
+			'vite',
 			'Tailwind CSS',
 			'Framer Motion',
 			'JavaScript',
@@ -39,10 +40,10 @@ const projects = [
 			'three.js',
 			'unsplash',
 		],
-		github: '#',
+		github: 'https://github.com/rajlaiya/portfolio',
 		image:
 			'https://miro.medium.com/v2/resize:fit:1123/1*6C702o6cpNyLm27WLdZyjg.png',
-		live: '#',
+		live: 'https://rajlaiya-portfolio.netlify.app/',
 		status: 'done',
 		mini: false,
 	},
@@ -69,7 +70,7 @@ const projects = [
 	{
 		title: 'Netflix clone',
 		description:
-			'A modern portfolio website template for developers, with dark mode, animations, and easy customization.',
+			'A Netflix clone that allows users to browse and watch movies and TV shows, with features like user authentication, watchlists, and recommendations.',
 		tech: [
 			'React',
 			'Tailwind CSS',
@@ -89,14 +90,13 @@ const projects = [
 	{
 		title: 'Spotify Music clone',
 		description:
-			'A modern portfolio website template for developers, with dark mode, animations, and easy customization.',
+			'crated music website that allows users to search and play music tracks, create playlists, and discover new music.',
 		tech: [
 			'React',
 			'Tailwind CSS',
 			'Framer Motion',
 			'JavaScript',
 			'EmailJS',
-			'three.js',
 			'unsplash',
 		],
 		github: '#',
@@ -109,7 +109,7 @@ const projects = [
 	{
 		title: 'Foodies web',
 		description:
-			'A RESTful API for a blogging platform, supporting authentication, comments, and markdown posts.',
+			'A food discovery website that helps users find and share recipes, with features like meal planning, grocery lists, and user reviews.',
 		tech: ['Vue3', 'Typescript', 'AI', 'Vite', 'Tailwind CSS', 'Unsplash'],
 		github: '#',
 		image:
@@ -121,19 +121,19 @@ const projects = [
 	{
 		title: 'Food Point web Design',
 		description:
-			'A RESTful API for a blogging platform, supporting authentication, comments, and markdown posts.',
+			'A modern food delivery website design created using Canva, featuring a clean layout, vibrant images, and user-friendly navigation.',
 		tech: ['Canva', 'AI'],
 		github: '#',
 		image:
-			'https://images.unsplash.com/photo-1534768654272-e97681c3a2c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWdlfGVufDB8fDB8fHww',
-		live: '#',
+			'https://drive.google.com/file/d/1gcsiR7nWqMx9J0OBnUjefa6jgxuNUAOy/view?usp=sharing',
+		live: 'https://food-point.my.canva.site/food-point-rl',
 		status: 'done',
 		mini: true,
 	},
 	{
 		title: 'Age calculator',
 		description:
-			'A RESTful API for a blogging platform, supporting authentication, comments, and markdown posts.',
+			'A simple age calculator that determines your age based on the date of birth you provide.',
 		tech: ['Html', 'CSS', 'JavaScript'],
 		github: '#',
 		image:
@@ -145,7 +145,7 @@ const projects = [
 	{
 		title: 'Basic calculator with notepad',
 		description:
-			'A RESTful API for a blogging platform, supporting authentication, comments, and markdown posts.',
+			'A simple calculator built using HTML, CSS, and JavaScript that performs basic arithmetic operations like addition, subtraction, multiplication, and division.',
 		tech: ['Html', 'Css', 'Javascript'],
 		github: '#',
 		image:
@@ -157,7 +157,7 @@ const projects = [
 	{
 		title: 'Temperature Converter',
 		description:
-			'A RESTful API for a blogging platform, supporting authentication, comments, and markdown posts.',
+			'A simple temperature converter that allows you to convert temperatures between Celsius, Fahrenheit, and Kelvin.',
 		tech: ['Html', 'CSS', 'JavaScript'],
 		github: '#',
 		image:

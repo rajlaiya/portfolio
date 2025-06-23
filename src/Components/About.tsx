@@ -41,7 +41,7 @@ const About = () => (
       </div>
       {/* Profile image for desktop */}
       <div className="hidden md:flex flex-1 justify-center w-full about-fade-in">
-        <img src="src/assets/IMG_Raj.jpg" alt="Profile" className="w-57 h-57 rounded-full object-cover profile-img-animate border-4 border-blue-100 dark:border-blue-800" />
+        <img src="https://drive.google.com/file/d/136k9qrKw-YlQb02AqTk66Z4m2pETQWX2/view?usp=sharing" alt="Profile" className="w-57 h-57 rounded-full object-cover profile-img-animate border-4 border-blue-100 dark:border-blue-800" />
       </div>
     </div>
   </section>
