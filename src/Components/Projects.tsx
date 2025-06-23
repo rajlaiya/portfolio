@@ -111,7 +111,6 @@ const projects = [
 		description:
 			'A food discovery website that helps users find and share recipes, with features like meal planning, grocery lists, and user reviews.',
 		tech: ['Vue3', 'Typescript', 'AI', 'Vite', 'Tailwind CSS', 'Unsplash'],
-		github: '#',
 		image:
 			'https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80',
 		live: '#',
@@ -147,9 +146,9 @@ const projects = [
 		description:
 			'A simple calculator built using HTML, CSS, and JavaScript that performs basic arithmetic operations like addition, subtraction, multiplication, and division.',
 		tech: ['Html', 'Css', 'Javascript'],
-		github: '#',
+		github: 'https://github.com/rajlaiya/SIMPLE-CALCULATOR-WITH-NOTEPAD',
 		image:
-			'',
+			'https://plus.unsplash.com/premium_photo-1684330690142-2fbfce401fe7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FsY3VsYXRvciUyMHdpdGglMjBub3RlcGFkfGVufDB8fDB8fHww',
 		live: 'https://rajlaiya.github.io/SIMPLE-CALCULATOR-WITH-NOTEPAD/',
 		status: 'done',
 		mini: true,

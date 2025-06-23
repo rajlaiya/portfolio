@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import "./Socialmedia.css";
 
 const socialLinks = [
@@ -22,9 +22,15 @@ const socialLinks = [
   },
   {
     name: "Youtube",
-    url: "https://instagram.com/yourhandle",
-    icon: <FaInstagram size={40} />,
-    desc: "Subscrive me on Youtube for Coding contents.",
+    url: "https://youtube.com/yourchannel",
+    icon: <FaYoutube size={40} />,
+    desc: "Subscribe to me on Youtube for Coding contents.",
+  },
+  {
+    name: "Whatsapp",
+    url: "https://wa.me/yourwhatsappphonenumber",
+    icon: <FaWhatsapp size={40} />,
+    desc: "Connect with me on Whatsapp for quick chats and updates.",
   },
 ];
 
