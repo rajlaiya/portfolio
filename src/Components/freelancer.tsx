@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./freelancer.css";
 import 'animate.css';
-import { FaUserTie, FaGithub, FaLinkedin, FaProjectDiagram, FaEnvelope, FaArrowRight } from 'react-icons/fa';
+import { FaUserTie, FaGithub, FaLinkedin, FaEnvelope, FaArrowRight } from 'react-icons/fa';
 
 const PROJECTS_COUNT = 24; // Example project count
 
 const Freelancer: React.FC = () => {
-    const [count, setCount] = useState(0);
+    const [, setCount] = useState(0);
 
     // Animated counter
     useEffect(() => {

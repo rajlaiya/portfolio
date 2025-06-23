@@ -1,43 +1,43 @@
-const resumeData = {
-  name: 'John Doe',
-  title: 'Fullstack Developer',
-  summary: 'Experienced Fullstack Developer with a passion for building scalable web applications and leading teams to deliver high-quality solutions.',
-  contact: {
-    email: 'john.doe@email.com',
-    phone: '+1 234 567 8901',
-    linkedin: 'linkedin.com/in/johndoe',
-    github: 'github.com/johndoe',
-  },
-  skills: [
-    'React', 'TypeScript', 'Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Tailwind CSS', 'Redux', 'REST APIs', 'Docker', 'Jest',
-  ],
-  experience: [
-    {
-      role: 'Lead Fullstack Developer',
-      company: 'Tech Solutions Inc.',
-      period: '2023 - Present',
-      details: 'Leading a team of developers to build SaaS products and deliver client solutions.'
-    },
-    {
-      role: 'Frontend Developer',
-      company: 'Web Creators',
-      period: '2020 - 2023',
-      details: 'Developed modern UIs and collaborated with backend teams.'
-    },
-  ],
-  education: [
-    {
-      degree: 'B.Tech in Computer Science',
-      place: 'ABC University',
-      year: '2016 - 2020',
-    },
-    {
-      degree: 'Fullstack Developer Certification',
-      place: 'Coursera',
-      year: '2021',
-    },
-  ],
-};
+// const resumeData = {
+//   name: 'John Doe',
+//   title: 'Fullstack Developer',
+//   summary: 'Experienced Fullstack Developer with a passion for building scalable web applications and leading teams to deliver high-quality solutions.',
+//   contact: {
+//     email: 'john.doe@email.com',
+//     phone: '+1 234 567 8901',
+//     linkedin: 'linkedin.com/in/johndoe',
+//     github: 'github.com/johndoe',
+//   },
+//   skills: [
+//     'React', 'TypeScript', 'Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Tailwind CSS', 'Redux', 'REST APIs', 'Docker', 'Jest',
+//   ],
+//   experience: [
+//     {
+//       role: 'Lead Fullstack Developer',
+//       company: 'Tech Solutions Inc.',
+//       period: '2023 - Present',
+//       details: 'Leading a team of developers to build SaaS products and deliver client solutions.'
+//     },
+//     {
+//       role: 'Frontend Developer',
+//       company: 'Web Creators',
+//       period: '2020 - 2023',
+//       details: 'Developed modern UIs and collaborated with backend teams.'
+//     },
+//   ],
+//   education: [
+//     {
+//       degree: 'B.Tech in Computer Science',
+//       place: 'ABC University',
+//       year: '2016 - 2020',
+//     },
+//     {
+//       degree: 'Fullstack Developer Certification',
+//       place: 'Coursera',
+//       year: '2021',
+//     },
+//   ],
+// };
 
 const Resume = () => (
   <section className="py-20 bg-white dark:bg-gray-900 w-full min-h-screen flex flex-col items-center" id="resume">

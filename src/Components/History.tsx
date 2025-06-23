@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FaGraduationCap, FaBriefcase, FaBookOpen, FaGamepad, FaStar, FaUniversity, FaCertificate, FaCloud, FaRobot, FaCamera, FaMusic, FaCodeBranch, FaGlobe, FaUserGraduate } from 'react-icons/fa';
+import { FaGraduationCap, FaBriefcase, FaBookOpen, FaGamepad, FaStar, FaUniversity, FaCertificate, FaRobot, FaCamera, FaMusic, FaCodeBranch, FaGlobe } from 'react-icons/fa';
 import './history-flipcard.css';
 
 const education = [
