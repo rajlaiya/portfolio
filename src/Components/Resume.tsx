@@ -1,3 +1,5 @@
+import './Resume.css'; // Add this at the top
+
 // const resumeData = {
 //   name: 'John Doe',
 //   title: 'Fullstack Developer',
@@ -47,25 +49,11 @@ const Resume = () => (
         <iframe
           src="src\Doduments\RAJ_LAIYA_RESUME_2025.pdf"
           title="Resume PDF"
-          className="w-full h-full overflow-auto scroll-smooth"
-          style={{ border: 'none' }}
+          className="w-full h-full overflow-auto scroll-smooth resume-iframe"
         ></iframe>
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-gradient-to-b from-transparent via-transparent to-blue-50 dark:to-gray-900 animate-fade-in" />
       </div>
     </div>
-    <style>{`
-      .scroll-smooth::-webkit-scrollbar {
-        width: 10px;
-        background: #e0e7ef;
-      }
-      .scroll-smooth::-webkit-scrollbar-thumb {
-        background: linear-gradient(135deg, #3b82f6 30%, #6366f1 100%);
-        border-radius: 6px;
-      }
-      .scroll-smooth::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(135deg, #2563eb 30%, #7c3aed 100%);
-      }
-    `}</style>
   </section>
 );
 

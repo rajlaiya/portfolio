@@ -1,4 +1,5 @@
 import '../about-animations.css';
+import './About.css'; // Import the new CSS file
 import profileImg from '../assets/profileImg';
 
 const skills = [
@@ -24,7 +25,7 @@ const About = () => (
       </div>
       <div className="flex-1 flex flex-col items-center md:items-start w-full px-6 md:px-0 about-fade-in">
         <h2 className="text-4xl font-extrabold mb-4 text-white drop-shadow-lg tracking-tight about-title-font">About Me</h2>
-        <p className="text-gray-100 text-xl leading-relaxed mb-8 w-full max-w-3xl" style={{fontFamily: 'Fira Code, JetBrains Mono, monospace'}}>
+        <p className="text-gray-100 text-xl leading-relaxed mb-8 w-full max-w-3xl about-paragraph-font">
           <span className="text-blue-200 font-bold">Fullstack Developer</span> with 1+ years of experience building web applications using modern frameworks.<br/>
           I love creating seamless user experiences and robust backend systems.<br/>
           My goal is to deliver <span className="text-blue-300 font-semibold">high-quality, maintainable code</span> and collaborate with teams to bring ideas to life.
