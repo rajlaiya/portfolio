@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./poppop.css";
 
 const Poppop: React.FC<{ show: boolean; onClose: () => void }> = ({ show, onClose }) => {

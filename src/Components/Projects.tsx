@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FaL } from 'react-icons/fa6';
+// import { FaL } from 'react-icons/fa6';
 
 const projects = [
 	{

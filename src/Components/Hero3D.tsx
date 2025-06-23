@@ -1,4 +1,4 @@
-import { OrbitControls, Stars, Text } from '@react-three/drei';
+import { Text } from '@react-three/drei';
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 
