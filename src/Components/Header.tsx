@@ -1,11 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
+import React from 'react';
 
 interface HeaderProps {
   theme: string;
   setTheme: (theme: string) => void;
 }
 
-const Header = ({ theme, setTheme }: HeaderProps) => {
+const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
   const [dropdown, setDropdown] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -32,6 +33,10 @@ const Header = ({ theme, setTheme }: HeaderProps) => {
     return () => window.removeEventListener('hashchange', close);
   }, [mobileMenu]);
 
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
   return (
     <header className="bg-white dark:bg-gray-900 shadow sticky top-0 z-50 transition-colors duration-300">
       <div className="w-full flex justify-between items-center py-4 px-6">
@@ -48,7 +53,7 @@ const Header = ({ theme, setTheme }: HeaderProps) => {
           <button
             aria-label="Toggle Theme"
             className="p-2 rounded-full bg-blue-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-gray-700 transition shadow-md w-12 h-12 flex items-center justify-center"
-            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+            onClick={toggleTheme}
           >
             {theme === 'light' ? (
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.66 5.66l-.71-.71M4.05 4.93l-.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
