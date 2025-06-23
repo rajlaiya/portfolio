@@ -44,10 +44,10 @@ const experience = [
 ];
 
 const currentLearning = [
-	{ label: 'Advance web Developing', icon: <FaRobot className="text-pink-500 text-xl animate-bounce" />, img: '/images/ai.png' },
+	{ label: 'Advance web Developing', icon: <FaRobot className="text-pink-500 text-xl animate-bounce" />, img: 'https://images.unsplash.com/photo-1505238680356-667803448bb6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fEFkdmFuY2UlMjB3ZWIlMjBEZXZlbG9waW5nfGVufDB8fDB8fHww' },
 	// { label: 'Cloud DevOps (AWS, Azure)', icon: <FaCloud className="text-blue-400 text-xl animate-spin-slow" />, img: '/images/cloud.png' },
-	{ label: '3D Web (tailwind css,Three.js, React Three Fiber)', icon: <FaGlobe className="text-green-500 text-xl animate-pulse" />, img: '/images/3dweb.png' },
-	{ label: 'Advanced TypeScript', icon: <FaCertificate className="text-yellow-500 text-xl animate-bounce" />, img: '/images/typescript.png' },
+	{ label: '3D Web (tailwind css,Three.js, React Three Fiber)', icon: <FaGlobe className="text-green-500 text-xl animate-pulse" />, img: 'https://images.unsplash.com/photo-1680057854607-26f610af9f8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fDNEJTIwV2VifGVufDB8fDB8fHww' },
+	{ label: 'Advanced TypeScript', icon: <FaCertificate className="text-yellow-500 text-xl animate-bounce" />, img: 'https://images.unsplash.com/photo-1605606722759-77da0b2f3d7d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWR2YW5jZSUyMHR5cGVzY3JpcHR8ZW58MHx8MHx8fDA%3D' },
 ];
 
 const hobbies = [
