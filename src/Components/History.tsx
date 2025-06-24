@@ -52,7 +52,7 @@ const currentLearning = [
 
 const hobbies = [
 	{ label: 'playing carrom', icon: <FaGamepad className="text-pink-500 text-xl animate-bounce" />, img: 'https://media.istockphoto.com/id/1316059170/photo/top-view-of-multiethnic-kids-hands-arranging-carrom-board-game-coins-for-playing-match.webp?a=1&b=1&s=612x612&w=0&k=20&c=7t7C7pEyKAT3UfWhkmIXFfdRCoc4nFU8XfZmjizOPrY=' },
-	{ label: 'Travel & Photography', icon: <FaCamera className="text-blue-400 text-xl animate-spin-slow" />, img: 'https://plus.unsplash.com/premium_photo-1677002240252-af3f88114efc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHJhdmVsJTIwcGhvdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D' },
+	{ label: 'Travel & Photography', icon: <FaCamera className="text-blue-400 text-xl animate-spin-slow" />, img: 'https://plus.unsplash.com/premium_photo-1677002240252-af3f88114efc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHJhdmVsJTIwcGhvdG9ncmFpaHxlbnwwfHwwfHx8MA%3D%3D' },
 	{ label: 'code problem solving', icon: <FaCodeBranch className="text-green-500 text-xl animate-pulse" />, img: '/images/opensource.png' },
 	{ label: 'Music', icon: <FaMusic className="text-yellow-500 text-xl animate-bounce" />, img: 'https://images.unsplash.com/photo-1617300040847-369dee9d35f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fGJveSUyMGxpc3NpbmclMjBtdXNpY3xlbnwwfHwwfHx8MA%3D%3D' },
 ];
@@ -166,7 +166,7 @@ const History = () => (
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 					{currentLearning.map((item, i) => (
 						<div key={i} className="group bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-green-50 dark:hover:bg-gray-800 animate-fade-in-up">
-							<div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 mb-2">
+							<div className="w-32 h-32 rounded-lg overflow-hidden flex-shrink-0 mb-2"> {/* Increased size */}
 								<img src={item.img} alt={item.label} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
 							</div>
 							<div className="flex items-center gap-2 text-lg font-bold text-green-700 dark:text-green-200">{item.icon} {item.label}</div>
@@ -182,7 +182,7 @@ const History = () => (
 						<div key={i} className="flip-card group bg-white dark:bg-gray-900 rounded-xl shadow-lg p-0 flex flex-col items-center text-center transition-all duration-500 animate-fade-in-up h-64 w-full">
 							<div className="flip-card-inner w-full h-full">
 								<div className="flip-card-front p-6 flex flex-col items-center justify-center h-64">
-									<div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 mb-2">
+									<div className="w-32 h-32 rounded-lg overflow-hidden flex-shrink-0 mb-2"> {/* Increased size */}
 										<img src={item.img} alt={item.label} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
 									</div>
 									<div className="flex items-center gap-2 text-lg font-bold text-pink-700 dark:text-pink-200">{item.icon} {item.label}</div>
