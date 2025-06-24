@@ -176,20 +176,31 @@ const History = () => (
 			</div>
 			{/* Hobbies & Interests Section */}
 			<div className="p-8 rounded-2xl bg-gradient-to-r from-pink-50 to-pink-100 dark:from-gray-800 dark:to-gray-900 shadow-2xl flex flex-col gap-4 animate-fade-in-up">
-				<h3 className="text-2xl font-extrabold text-pink-700 dark:text-pink-300 mb-4 flex items-center gap-3"><FaGamepad className="animate-bounce" /> Hobbies & Interests</h3>
+				<h3 className="text-2xl font-extrabold text-pink-700 dark:text-pink-300 mb-4 flex items-center gap-3">
+					<FaGamepad className="animate-bounce" /> Hobbies & Interests
+				</h3>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-					{hobbies.map((item, i) => (
-						<div key={i} className="flip-card group bg-white dark:bg-gray-900 rounded-xl shadow-lg p-0 flex flex-col items-center text-center transition-all duration-500 animate-fade-in-up h-64 w-full">
-							<div className="flip-card-inner w-full h-full">
-								<div className="flip-card-front p-6 flex flex-col items-center justify-center h-64">
-									<div className="w-32 h-32 rounded-lg overflow-hidden flex-shrink-0 mb-2"> {/* Increased size */}
-										<img src={item.img} alt={item.label} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
-									</div>
-									<div className="flex items-center gap-2 text-lg font-bold text-pink-700 dark:text-pink-200">{item.icon} {item.label}</div>
-								</div>
-								<div className="flip-card-back p-6 flex flex-col items-center justify-center bg-pink-100 dark:bg-pink-900 rounded-xl h-64">
-									<div className="text-base text-gray-700 dark:text-gray-200">Fun & Passion!</div>
-								</div>
+					{[
+						...hobbies,
+						{
+							label: 'Photo/Video Editing',
+							icon: <FaCamera className="text-red-400 text-xl animate-spin-slow" />,
+							img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=500&auto=format&fit=crop&q=60'
+						}
+					].map((item, i) => (
+						<div
+							key={i}
+							className="group bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+						>
+							<div className="w-32 h-32 rounded-lg overflow-hidden flex-shrink-0 mb-2">
+								<img
+									src={item.img}
+									alt={item.label}
+									className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+								/>
+							</div>
+							<div className="flex items-center gap-2 text-lg font-bold text-pink-700 dark:text-pink-200">
+								{item.icon} {item.label}
 							</div>
 						</div>
 					))}
