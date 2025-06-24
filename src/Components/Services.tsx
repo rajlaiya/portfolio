@@ -8,18 +8,23 @@ const services = [
     icon: 'https://img.icons8.com/ios-filled/50/3b82f6/web.png',
   },
   {
-    title: 'UI/UX Design',
-    description: 'Beautiful, user-friendly interfaces and experiences tailored to your business needs.',
-    icon: 'https://img.icons8.com/ios-filled/50/3b82f6/design.png',
+    title: 'Photo/Video Editing',
+    description: 'Professional editing services for photos and videos, enhancing quality and visual appeal.',
+    icon: 'https://img.icons8.com/ios-filled/50/3b82f6/photo-editing.png',
   },
   {
-    title: 'API Integration',
+    title: 'Frontend UI Design',
+    description: 'Crafting intuitive and visually appealing user interfaces with a focus on user experience and accessibility.',
+    icon: 'https://img.icons8.com/ios-filled/50/3b82f6/frontend.png',
+  },
+  {
+    title: 'Basic API Integration',
     description: 'Seamless integration of third-party APIs and services for enhanced functionality.',
-    icon: 'https://img.icons8.com/ios-filled/50/3b82f6/api-settings.png',
+    icon: 'https://img.icons8.com/ios-filled/50/3b82f6/api.png',
   },
   {
-    title: 'Consulting',
-    description: 'Expert advice on architecture, performance, and best practices for your tech projects.',
+    title: 'Consulting about Tech',
+    description: 'Expert advice on technology solutions, software architecture, and best practices to optimize your projects.',
     icon: 'https://img.icons8.com/ios-filled/50/3b82f6/consultation.png',
   },
 ];

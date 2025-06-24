@@ -38,13 +38,11 @@ const projects = [
 			'JavaScript',
 			'EmailJS',
 			'three.js',
-			'unsplash',
 		],
-		github: 'https://github.com/rajlaiya/portfolio',
 		image:
 			'https://miro.medium.com/v2/resize:fit:1123/1*6C702o6cpNyLm27WLdZyjg.png',
 		live: 'https://rajlaiya-portfolio.netlify.app/',
-		status: 'done',
+		status: 'progress',
 		mini: false,
 	},
 	{
@@ -64,7 +62,7 @@ const projects = [
 		image:
 			'https://media.istockphoto.com/id/1413672003/photo/driver-checking-car-sharing-app.webp?a=1&b=1&s=612x612&w=0&k=20&c=7pxu25okq3y_g-nZZyf_BaYEmkiPQFKlmf1GkVG1_es=',
 		live: '#',
-		status: 'done',
+		status: 'progress',
 		mini: false,
 	},
 	{
@@ -84,7 +82,7 @@ const projects = [
 		image:
 			'https://media.istockphoto.com/id/1357667837/photo/woman-watching-tv-series-and-movies-on-online-streaming-service-at-home.webp?a=1&b=1&s=612x612&w=0&k=20&c=03mYubwYNPKAW9KCsGqk7ZiLRurCMpB_t5rrlU0XcCw=',
 		live: '#',
-		status: 'done',
+		status: 'progress',
 		mini: false,
 	},
 	{
@@ -103,7 +101,7 @@ const projects = [
 		image:
 			'https://media.istockphoto.com/id/1491223480/photo/3d-illustration-of-happy-man-with-phone-and-headphones-listening-to-music-on-color-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=CC_GZ5yoSp0Iu8o9y46QhXzMcONCNr5U9lmlFtmpWkI=',
 		live: '#',
-		status: 'done',
+		status: 'progress',
 		mini: false,
 	},
 	{
@@ -114,7 +112,7 @@ const projects = [
 		image:
 			'https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80',
 		live: '#',
-		status: 'done',
+		status: 'progress',
 		mini: false,
 	},
 	{
@@ -122,7 +120,6 @@ const projects = [
 		description:
 			'A modern food delivery website design created using Canva, featuring a clean layout, vibrant images, and user-friendly navigation.',
 		tech: ['Canva', 'AI'],
-		github: '#',
 		image:
 			'https://drive.google.com/file/d/1gcsiR7nWqMx9J0OBnUjefa6jgxuNUAOy/view?usp=sharing',
 		live: 'https://food-point.my.canva.site/food-point-rl',

@@ -14,7 +14,7 @@ const services = [
     },
     {
         title: "Photo/Video Editing",
-        icon: <FaCode className="text-4xl text-blue-500 mb-2" />,
+        icon: <FaPaintBrush className="text-4xl text-pink-500 mb-2" />,
         desc: "Editing photos and videos to create stunning visual content for various platforms.",
     },
     {
