@@ -50,7 +50,7 @@ const Resume = () => (
           src="/RAJ_LAIYA_RESUME_2025.pdf"
           title="Resume PDF"
           className="w-full h-full overflow-auto scroll-smooth resume-iframe"
-        ></iframe>
+        />
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-gradient-to-b from-transparent via-transparent to-blue-50 dark:to-gray-900 animate-fade-in" />
       </div>
     </div>

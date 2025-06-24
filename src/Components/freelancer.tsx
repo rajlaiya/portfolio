@@ -1,9 +1,33 @@
 import React, { useState, useEffect } from "react";
 import "./freelancer.css";
 import 'animate.css';
-import { FaUserTie, FaGithub, FaLinkedin, FaEnvelope, FaArrowRight } from 'react-icons/fa';
+import { FaUserTie, FaGithub, FaLinkedin, FaEnvelope, FaArrowRight, FaCode, FaPaintBrush, FaMobileAlt } from 'react-icons/fa';
 
 const PROJECTS_COUNT = 24; // Example project count
+
+// Add your services here
+const services = [
+    {
+        title: "Web Development",
+        icon: <FaCode className="text-4xl text-blue-500 mb-2" />,
+        desc: "Building responsive and dynamic websites using modern technologies like React, Node.js, and more.",
+    },
+    {
+        title: "Photo/Video Editing",
+        icon: <FaCode className="text-4xl text-blue-500 mb-2" />,
+        desc: "Editing photos and videos to create stunning visual content for various platforms.",
+    },
+    {
+        title: "Frontend UI design",
+        icon: <FaPaintBrush className="text-4xl text-purple-500 mb-2" />,
+        desc: "Creating visually appealing and user-friendly interfaces for web applications.",
+    },
+    {
+        title: "Solving Computer Science Problems",
+        icon: <FaMobileAlt className="text-4xl text-green-500 mb-2" />,
+        desc: "Providing solutions to complex computer science problems and algorithms.",
+    },
+];
 
 const Freelancer: React.FC = () => {
     const [, setCount] = useState(0);
@@ -70,6 +94,24 @@ const Freelancer: React.FC = () => {
                 </div>
                 
             </div>
+
+            {/* Services Section */}
+            <div className="mt-12 w-full max-w-4xl mx-auto">
+                <h2 className="text-2xl font-bold text-center mb-8 text-blue-700">My Services</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {services.map((service, idx) => (
+                        <div
+                            key={idx}
+                            className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300"
+                        >
+                            {service.icon}
+                            <h3 className="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-300">{service.title}</h3>
+                            <p className="text-gray-600 dark:text-gray-200">{service.desc}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
             {/* Background animation */}
             <div className="freelancer-bg-anim"></div>
             <footer className="freelancer-footer">
