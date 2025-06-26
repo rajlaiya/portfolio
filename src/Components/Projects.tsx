@@ -111,8 +111,8 @@ const projects = [
 		tech: ['Vue3', 'Typescript', 'AI', 'Vite', 'Tailwind CSS', 'Unsplash'],
 		image:
 			'https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80',
-		live: '#',
-		status: 'progress',
+		live: 'https://foodieshome.netlify.app/about',
+		status: 'done',
 		mini: false,
 	},
 	{
