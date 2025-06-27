@@ -131,10 +131,10 @@ const projects = [
 		description:
 			'A simple age calculator that determines your age based on the date of birth you provide.',
 		tech: ['Html', 'CSS', 'JavaScript'],
-		github: '#',
+		github: 'https://github.com/rajlaiya/Age_calculator_pro',
 		image:
 			'https://images.unsplash.com/photo-1534768654272-e97681c3a2c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWdlfGVufDB8fDB8fHww',
-		live: '#',
+		live: 'https://funwithage.netlify.app/',
 		status: 'done',
 		mini: true,
 	},
