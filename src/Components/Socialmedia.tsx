@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaYoutube, FaWhatsapp, FaUserTie } from "react-icons/fa";
 import "./Socialmedia.css";
 
 const socialLinks = [
@@ -32,6 +32,12 @@ const socialLinks = [
     icon: <FaWhatsapp size={40} />,
     desc: "Connect with me on Whatsapp for quick chats and updates.",
   },
+  {
+    name: "Freelancer",
+    url: "#freelancer",
+    icon: <FaUserTie size={40} />,
+    desc: "Hire me for freelance projects and professional services.",
+  },
 ];
 
 const Socialmedia = () => (
@@ -47,8 +53,7 @@ const Socialmedia = () => (
         <a
           key={link.name}
           href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
+          {...(link.name === "Freelancer" ? {} : { target: "_blank", rel: "noopener noreferrer" })}
           className="flip-card group block w-full h-80 max-w-xs mx-auto cursor-pointer"
         >
           <div className="flip-card-inner w-full h-full">

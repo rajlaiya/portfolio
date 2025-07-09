@@ -82,7 +82,6 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
                 <a href="#resume" className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-800 text-blue-700 dark:text-blue-200" onClick={() => setDropdown(false)}>Resume</a>
                 <a href="#services" className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-800 text-blue-700 dark:text-blue-200" onClick={() => setDropdown(false)}>Services</a>
                 <a href="#socialmedia" className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-800 text-blue-700 dark:text-blue-200" onClick={() => setDropdown(false)}>Socialmedia</a>
-                <a href="#freelancer" className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-800 text-blue-700 dark:text-blue-200" onClick={() => setDropdown(false)}>Freelancer</a>
               </div>
             )}
           </div>
@@ -114,7 +113,6 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
             <a href="#history" onClick={() => setMobileMenu(false)}>History</a>
             <a href="#services" onClick={() => setMobileMenu(false)}>Services</a>
             <a href="#socialmedia" onClick={() => setMobileMenu(false)}>Socialmedia</a>
-            <a href="#freelancer" onClick={() => setMobileMenu(false)}>Freelancer</a>
           </nav>
         </>
       )}
