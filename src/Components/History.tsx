@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FaGraduationCap, FaBriefcase, FaBookOpen, FaGamepad, FaStar, FaUniversity, FaCertificate, FaRobot, FaCamera, FaMusic, FaCodeBranch, FaGlobe } from 'react-icons/fa';
+import { FaGraduationCap, FaBriefcase, FaBookOpen, FaStar, FaUniversity, FaCertificate, FaRobot, FaCodeBranch, FaGlobe } from 'react-icons/fa';
 import './history-flipcard.css';
 
 const education = [
@@ -50,19 +50,11 @@ const currentLearning = [
 	{ label: 'Advanced TypeScript', icon: <FaCertificate className="text-yellow-500 text-xl animate-bounce" />, img: 'https://images.unsplash.com/photo-1605606722759-77da0b2f3d7d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWR2YW5jZSUyMHR5cGVzY3JpcHR8ZW58MHx8MHx8fDA%3D' },
 ];
 
-const hobbies = [
-	{ label: 'playing carrom', icon: <FaGamepad className="text-pink-500 text-xl animate-bounce" />, img: 'https://media.istockphoto.com/id/1316059170/photo/top-view-of-multiethnic-kids-hands-arranging-carrom-board-game-coins-for-playing-match.webp?a=1&b=1&s=612x612&w=0&k=20&c=7t7C7pEyKAT3UfWhkmIXFfdRCoc4nFU8XfZmjizOPrY=' },
-	{ label: 'Travel & Photography', icon: <FaCamera className="text-blue-400 text-xl animate-spin-slow" />, img: 'https://plus.unsplash.com/premium_photo-1677002240252-af3f88114efc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHJhdmVsJTIwcGhvdG9ncmFpaHxlbnwwfHwwfHx8MA%3D%3D' },
-	{ label: 'code problem solving', icon: <FaCodeBranch className="text-green-500 text-xl animate-pulse" />, img: '/images/opensource.png' },
-	{ label: 'Music', icon: <FaMusic className="text-yellow-500 text-xl animate-bounce" />, img: 'https://images.unsplash.com/photo-1617300040847-369dee9d35f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fGJveSUyMGxpc3NpbmclMjBtdXNpY3xlbnwwfHwwfHx8MA%3D%3D' },
-];
-
 const typingTexts = [
 	'My Journey',
 	'Education',
 	'Experience',
 	'Current Learning',
-	'Hobbies & Interests',
 ];
 
 const TypingTitle = () => {
@@ -170,38 +162,6 @@ const History = () => (
 								<img src={item.img} alt={item.label} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
 							</div>
 							<div className="flex items-center gap-2 text-lg font-bold text-green-700 dark:text-green-200">{item.icon} {item.label}</div>
-						</div>
-					))}
-				</div>
-			</div>
-			{/* Hobbies & Interests Section */}
-			<div className="p-8 rounded-2xl bg-gradient-to-r from-pink-50 to-pink-100 dark:from-gray-800 dark:to-gray-900 shadow-2xl flex flex-col gap-4 animate-fade-in-up">
-				<h3 className="text-2xl font-extrabold text-pink-700 dark:text-pink-300 mb-4 flex items-center gap-3">
-					<FaGamepad className="animate-bounce" /> Hobbies & Interests
-				</h3>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-					{[
-						...hobbies,
-						{
-							label: 'Photo/Video Editing',
-							icon: <FaCamera className="text-red-400 text-xl animate-spin-slow" />,
-							img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=500&auto=format&fit=crop&q=60'
-						}
-					].map((item, i) => (
-						<div
-							key={i}
-							className="group bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-						>
-							<div className="w-32 h-32 rounded-lg overflow-hidden flex-shrink-0 mb-2">
-								<img
-									src={item.img}
-									alt={item.label}
-									className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-								/>
-							</div>
-							<div className="flex items-center gap-2 text-lg font-bold text-pink-700 dark:text-pink-200">
-								{item.icon} {item.label}
-							</div>
 						</div>
 					))}
 				</div>

@@ -1,6 +1,7 @@
 import '../about-animations.css';
 import './About.css'; // Import the new CSS file
 import profileImg from '../assets/IMG_Raj.jpg'; // Correct import
+import { FaHistory } from 'react-icons/fa';
 
 const skills = [
   { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
@@ -43,6 +44,23 @@ const About = () => (
       <div className="hidden md:flex flex-1 justify-center w-full about-fade-in">
         <img src={profileImg} alt="Profile" className="w-57 h-57 rounded-full object-cover profile-img-animate border-4 border-blue-100 dark:border-blue-800" />
       </div>
+    </div>
+    
+    {/* History Button */}
+    <div className="flex justify-center mt-8 w-full">
+      <a
+        href="#history"
+        className="group relative flex items-center justify-center w-16 h-16 bg-blue-600/70 dark:bg-blue-500/70 hover:bg-blue-700/80 dark:hover:bg-blue-400/80 backdrop-blur-sm rounded-full shadow-lg transition-all duration-500 hover:scale-125 hover:shadow-2xl hover:shadow-blue-500/50 animate-pulse hover:animate-none border-2 border-blue-300/30 dark:border-blue-400/30 hover:border-blue-500/60 dark:hover:border-blue-300/60"
+        title="View History"
+      >
+        <FaHistory className="text-white text-2xl transition-all duration-500 group-hover:rotate-180 group-hover:scale-110 drop-shadow-lg" />
+        <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gray-900/90 dark:bg-gray-700/90 text-white text-xs px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap backdrop-blur-sm border border-gray-600/30 shadow-xl">
+          View History
+          <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900/90 dark:border-t-gray-700/90"></div>
+        </div>
+        {/* Animated ring effect */}
+        <div className="absolute inset-0 rounded-full border-2 border-blue-400/50 animate-ping"></div>
+      </a>
     </div>
   </section>
 );

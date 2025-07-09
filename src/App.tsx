@@ -66,7 +66,7 @@ function App() {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 dark:bg-gray-900">
         <Loader />
-        <h1 className="mt-8 text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 animate-pulse drop-shadow-lg text-center">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 animate-pulse drop-shadow-lg text-center" style={{ marginTop: '5px' }}>
           Welcome to Raj Laiya Portfolio
         </h1>
       </div>

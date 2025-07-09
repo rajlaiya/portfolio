@@ -108,8 +108,8 @@ const Contact = () => {
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-3xl font-bold mb-6 text-white drop-shadow-lg contact-fade-in">Contact</h2>
         <div className="grid md:grid-cols-2 gap-10 items-start">
-          <form onSubmit={handleSubmit} className="coding-form p-8 flex flex-col gap-6 contact-fade-in animate__animated animate__fadeInLeft">
-            <label htmlFor="name">Name</label>
+          <form onSubmit={handleSubmit} className="coding-form bg-white/90 dark:bg-gray-900/90 p-8 flex flex-col gap-6 contact-fade-in animate__animated animate__fadeInLeft rounded-lg shadow-lg">
+            <label htmlFor="name" className="text-gray-700 dark:text-gray-200 font-semibold">Name</label>
             <div className="relative flex items-center">
               <img src={icons.name} alt="Name" className="w-6 h-6 absolute left-3 top-1/2 -translate-y-1/2 opacity-80" />
               <input
@@ -119,12 +119,12 @@ const Contact = () => {
                 placeholder="Your Name"
                 value={values.name}
                 onChange={handleChange}
-                className={`pl-12 border rounded px-4 py-2 w-full focus:outline-none focus:border-blue-500 transition ${errors.name ? 'input-error' : 'border-gray-300'}`}
+                className={`pl-12 border rounded px-4 py-2 w-full focus:outline-none focus:border-blue-500 transition bg-white dark:bg-gray-800 text-gray-900 dark:text-white ${errors.name ? 'input-error border-red-500' : 'border-gray-300 dark:border-gray-600'}`}
                 autoComplete="off"
               />
             </div>
             {errors.name && <span className="text-red-500 text-xs ml-2">{errors.name}</span>}
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email" className="text-gray-700 dark:text-gray-200 font-semibold">Email</label>
             <div className="relative flex items-center">
               <img src={icons.email} alt="Email" className="w-6 h-6 absolute left-3 top-1/2 -translate-y-1/2 opacity-80" />
               <input
@@ -134,12 +134,12 @@ const Contact = () => {
                 placeholder="Your Email"
                 value={values.email}
                 onChange={handleChange}
-                className={`pl-12 border rounded px-4 py-2 w-full focus:outline-none focus:border-blue-500 transition ${errors.email ? 'input-error' : 'border-gray-300'}`}
+                className={`pl-12 border rounded px-4 py-2 w-full focus:outline-none focus:border-blue-500 transition bg-white dark:bg-gray-800 text-gray-900 dark:text-white ${errors.email ? 'input-error border-red-500' : 'border-gray-300 dark:border-gray-600'}`}
                 autoComplete="off"
               />
             </div>
             {errors.email && <span className="text-red-500 text-xs ml-2">{errors.email}</span>}
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message" className="text-gray-700 dark:text-gray-200 font-semibold">Message</label>
             <div className="relative flex items-center">
               <img src={icons.message} alt="Message" className="w-6 h-6 absolute left-3 top-4 opacity-80" />
               <textarea
@@ -149,13 +149,13 @@ const Contact = () => {
                 rows={4}
                 value={values.message}
                 onChange={handleChange}
-                className={`pl-12 border rounded px-4 py-2 w-full focus:outline-none focus:border-blue-500 transition ${errors.message ? 'input-error' : 'border-gray-300'}`}
+                className={`pl-12 border rounded px-4 py-2 w-full focus:outline-none focus:border-blue-500 transition bg-white dark:bg-gray-800 text-gray-900 dark:text-white ${errors.message ? 'input-error border-red-500' : 'border-gray-300 dark:border-gray-600'}`}
               />
             </div>
             {errors.message && <span className="text-red-500 text-xs ml-2">{errors.message}</span>}
             <button
               type="submit"
-              className="bg-blue-600 text-white px-6 py-2 rounded font-semibold hover:bg-blue-700 transition contact-fade-in shadow-lg hover:scale-105 active:scale-95"
+              className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white px-6 py-2 rounded font-semibold transition contact-fade-in shadow-lg hover:scale-105 active:scale-95"
               disabled={sending}
             >
               {sending ? 'Sending...' : 'Send Message'}

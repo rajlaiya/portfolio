@@ -78,7 +78,6 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
             </button>
             {dropdown && (
               <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-900 rounded-lg shadow-lg z-50 border border-blue-100 dark:border-gray-800 animate-fade-in">
-                <a href="#history" className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-800 text-blue-700 dark:text-blue-200" onClick={() => setDropdown(false)}>History</a>
                 <a href="#resume" className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-800 text-blue-700 dark:text-blue-200" onClick={() => setDropdown(false)}>Resume</a>
                 <a href="#services" className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-800 text-blue-700 dark:text-blue-200" onClick={() => setDropdown(false)}>Services</a>
                 <a href="#socialmedia" className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-800 text-blue-700 dark:text-blue-200" onClick={() => setDropdown(false)}>Socialmedia</a>
@@ -110,7 +109,6 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
             <a href="#skills" onClick={() => setMobileMenu(false)}>Skills</a>
             <a href="#projects" onClick={() => setMobileMenu(false)}>Projects</a>
             <a href="#contact" onClick={() => setMobileMenu(false)}>Contact</a>
-            <a href="#history" onClick={() => setMobileMenu(false)}>History</a>
             <a href="#services" onClick={() => setMobileMenu(false)}>Services</a>
             <a href="#socialmedia" onClick={() => setMobileMenu(false)}>Socialmedia</a>
           </nav>
