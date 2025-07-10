@@ -28,8 +28,8 @@ const Hero3D = () => (
     <div className="container mx-auto px-6 py-12 flex flex-col items-center justify-center gap-10 z-10 relative max-w-4xl">
       <div className="w-full text-center px-4 py-8">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 dark:text-white drop-shadow-lg font-['Fira_Code','JetBrains_Mono','monospace']">Hi, I'm <span className="text-blue-600 dark:text-blue-400">Raj Laiya</span></h2>
-        <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-purple-600 dark:text-blue-400 font-['Fira_Code','JetBrains_Mono','monospace']">Fullstack Developer</h3>
-        <p className="mb-8 text-gray-700 dark:text-gray-200 max-w-2xl mx-auto font-['Fira_Code','JetBrains_Mono','monospace'] text-lg">I build scalable web applications with modern technologies. Passionate about clean code, and solving real-world problems.</p>
+        <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-purple-600 dark:text-blue-400 font-['Fira_Code','JetBrains_Mono','monospace']">Front-end web Developer</h3>
+        <p className="mb-8 text-gray-700 dark:text-gray-200 max-w-2xl mx-auto font-['Fira_Code','JetBrains_Mono','monospace'] text-lg">I build scalable web applications with modern technologies like reactjs, Vuejs. Passionate about clean code, and solving real-world problems.</p>
         <div className="flex flex-wrap gap-10 mb-8 justify-center">
           <a href="#contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-700 transition font-['Fira_Code','JetBrains_Mono','monospace']">Contact Me</a>
           <a href="#projects" className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-green-700 transition font-['Fira_Code','JetBrains_Mono','monospace']">Projects</a>
