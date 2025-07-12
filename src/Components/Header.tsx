@@ -44,15 +44,8 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
         {/* Mobile/Theme Buttons */}
         <div className="flex items-center gap-2 md:hidden ml-auto">
           <button
-            className="p-2 rounded-full bg-blue-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-gray-700 transition shadow-md w-12 h-12 flex items-center justify-center"
-            aria-label="Open menu"
-            onClick={() => setMobileMenu((m) => !m)}
-          >
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
-          </button>
-          <button
             aria-label="Toggle Theme"
-            className="p-2 rounded-full bg-blue-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-gray-700 transition shadow-md w-12 h-12 flex items-center justify-center"
+            className="p-2 rounded-full bg-blue-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-gray-700 transition shadow-md w-12 h-12 flex items-center justify-center mr-4"
             onClick={toggleTheme}
           >
             {theme === 'light' ? (
@@ -60,6 +53,13 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
             ) : (
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" /></svg>
             )}
+          </button>
+          <button
+            className="p-2 rounded-full bg-blue-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-gray-700 transition shadow-md w-12 h-12 flex items-center justify-center"
+            aria-label="Open menu"
+            onClick={() => setMobileMenu((m) => !m)}
+          >
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
           </button>
         </div>
         {/* Desktop Nav */}
@@ -78,7 +78,6 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
             </button>
             {dropdown && (
               <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-900 rounded-lg shadow-lg z-50 border border-blue-100 dark:border-gray-800 animate-fade-in">
-                <a href="#resume" className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-800 text-blue-700 dark:text-blue-200" onClick={() => setDropdown(false)}>Resume</a>
                 <a href="#services" className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-800 text-blue-700 dark:text-blue-200" onClick={() => setDropdown(false)}>Services</a>
                 <a href="#socialmedia" className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-800 text-blue-700 dark:text-blue-200" onClick={() => setDropdown(false)}>Socialmedia</a>
               </div>

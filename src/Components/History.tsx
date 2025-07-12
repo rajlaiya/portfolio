@@ -7,7 +7,7 @@ const education = [
 		degree: 'Diploma in Electronics & Communication',
 		institution: 'GTU University',
 		year: '2018-2021',
-		icon: <FaUniversity className="text-blue-500 text-2xl animate-bounce" />,
+		icon: <FaUniversity className="text-blue-500 text-2xl" />,
 		details: 'Graduated with 1st class distinction, specialized in Digital electronics, computer networks and vlsi.',
 	},
 	{
@@ -31,7 +31,7 @@ const experience = [
 		title: 'Front-end Developer project Intern',
 		company: 'CodeAlpha Solutions',
 		year: 'june 2024-Dec 2024',
-		icon: <FaCodeBranch className="text-green-500 text-2xl animate-bounce" />,
+		icon: <FaCodeBranch className="text-green-500 text-2xl" />,
 		details: 'Completed Different task Given by Mentor. Developed and maintained client-facing web using Html, CSS, and JavaScript.',
 	},
 	{
@@ -44,10 +44,10 @@ const experience = [
 ];
 
 const currentLearning = [
-	{ label: 'Advance web Developing', icon: <FaRobot className="text-pink-500 text-xl animate-bounce" />, img: 'https://images.unsplash.com/photo-1505238680356-667803448bb6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fEFkdmFuY2UlMjB3ZWIlMjBEZXZlbG9waW5nfGVufDB8fDB8fHww' },
+	{ label: 'Advance web Developing', icon: <FaRobot className="text-pink-500 text-xl" />, img: 'https://images.unsplash.com/photo-1505238680356-667803448bb6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fEFkdmFuY2UlMjB3ZWIlMjBEZXZlbG9waW5nfGVufDB8fDB8fHww' },
 	// { label: 'Cloud DevOps (AWS, Azure)', icon: <FaCloud className="text-blue-400 text-xl animate-spin-slow" />, img: '/images/cloud.png' },
 	{ label: '3D Web (tailwind css,Three.js, React Three Fiber)', icon: <FaGlobe className="text-green-500 text-xl animate-pulse" />, img: 'https://images.unsplash.com/photo-1680057854607-26f610af9f8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fDNEJTIwV2VifGVufDB8fDB8fHww' },
-	{ label: 'Advanced TypeScript', icon: <FaCertificate className="text-yellow-500 text-xl animate-bounce" />, img: 'https://images.unsplash.com/photo-1605606722759-77da0b2f3d7d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWR2YW5jZSUyMHR5cGVzY3JpcHR8ZW58MHx8MHx8fDA%3D' },
+	{ label: 'Advanced TypeScript', icon: <FaCertificate className="text-yellow-500 text-xl" />, img: 'https://images.unsplash.com/photo-1605606722759-77da0b2f3d7d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWR2YW5jZSUyMHR5cGVzY3JpcHR8ZW58MHx8MHx8fDA%3D' },
 ];
 
 const typingTexts = [
@@ -96,7 +96,7 @@ const TypingTitle = () => {
 
 	return (
 		<h2 className="text-3xl font-bold mb-8 text-blue-600 dark:text-blue-400 flex items-center gap-3">
-			<FaStar className="text-yellow-400 animate-bounce" />
+			<FaStar className="text-yellow-400" />
 			{text}
 			<span className={blink ? '' : 'opacity-0'}>|</span>
 		</h2>
@@ -121,7 +121,7 @@ const History = () => (
 			{/* Education Section */}
 			<div className="p-8 rounded-2xl bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-900 shadow-2xl flex flex-col gap-4 animate-fade-in-up">
 				<h3 className="text-2xl font-extrabold text-blue-700 dark:text-blue-300 mb-4 flex items-center gap-3">
-					<FaGraduationCap className="animate-bounce" /> Education
+					<FaGraduationCap className="" /> Education
 				</h3>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 					{education.map((edu, i) => (
@@ -154,7 +154,7 @@ const History = () => (
 			</div>
 			{/* Current Learning Section */}
 			<div className="p-8 rounded-2xl bg-gradient-to-r from-green-50 to-green-100 dark:from-gray-800 dark:to-gray-900 shadow-2xl flex flex-col gap-4 animate-fade-in-up">
-				<h3 className="text-2xl font-extrabold text-green-700 dark:text-green-300 mb-4 flex items-center gap-3"><FaBookOpen className="animate-bounce" /> Current Learning</h3>
+				<h3 className="text-2xl font-extrabold text-green-700 dark:text-green-300 mb-4 flex items-center gap-3"><FaBookOpen className="" /> Current Learning</h3>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 					{currentLearning.map((item, i) => (
 						<div key={i} className="group bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-green-50 dark:hover:bg-gray-800 animate-fade-in-up">
