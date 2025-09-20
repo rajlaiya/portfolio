@@ -18,15 +18,15 @@ const skills = [
 ];
 
 const About = () => (
-  <section className="py-20 about-animated-bg w-full font-['Montserrat','Fira_Code','JetBrains_Mono','monospace']" id="about">
-    <div className="flex flex-col md:flex-row gap-10 items-center w-full px-0 md:px-10">
+  <section className="py-12 md:py-16 about-animated-bg w-full font-['Montserrat','Fira_Code','JetBrains_Mono','monospace'] min-h-[calc(100vh-var(--nav-h))] max-h-[calc(100vh-var(--nav-h))] overflow-hidden" id="about">
+  <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-center w-full px-0 md:px-10 h-full">
       {/* Profile image first on mobile */}
       <div className="flex md:hidden justify-center w-full about-fade-in mb-6">
         <img src={profileImg} alt="Profile" className="w-37 h-37 max-w-xs mx-auto rounded-full object-cover profile-img-animate border-4 border-blue-100 dark:border-blue-800 shadow-lg" />
       </div>
       <div className="flex-1 flex flex-col items-center md:items-start w-full px-6 md:px-0 about-fade-in">
         <h2 className="text-4xl font-extrabold mb-4 text-white drop-shadow-lg tracking-tight about-title-font">About Me</h2>
-        <p className="text-gray-100 text-xl leading-relaxed mb-8 w-full max-w-3xl about-paragraph-font">
+  <p className="text-gray-100 text-lg md:text-xl leading-relaxed mb-6 md:mb-8 w-full max-w-3xl about-paragraph-font">
           <span className="text-blue-200 font-bold">Fullstack Developer</span> with 1+ years of experience building web applications using modern frameworks.<br/>
           I love creating seamless user experiences and robust backend systems.<br/>
           My goal is to deliver <span className="text-blue-300 font-semibold">high-quality, maintainable code</span> and collaborate with teams to bring ideas to life.

@@ -37,8 +37,22 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
+  const headerRef = useRef<HTMLElement | null>(null);
+
+  // Expose header height as CSS variable so sections can size to viewport minus header
+  useEffect(() => {
+    const setNavHeight = () => {
+      const h = headerRef.current?.offsetHeight || 64;
+      document.documentElement.style.setProperty('--nav-h', `${h}px`);
+    };
+    setNavHeight();
+    const onResize = () => setNavHeight();
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
   return (
-    <header className="bg-white dark:bg-gray-900 shadow sticky top-0 z-50 transition-colors duration-300">
+    <header ref={headerRef} className="sticky top-0 z-50 backdrop-blur-md bg-white/55 dark:bg-gray-900/45 border-b border-black/5 dark:border-white/10 shadow-sm transition-colors duration-300">
       <div className="w-full flex justify-between items-center py-4 px-6">
         <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">Raj laiya</span>
         {/* Mobile/Theme Buttons */}

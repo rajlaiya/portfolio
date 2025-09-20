@@ -36,18 +36,18 @@ const services = [
 
 const Services = () => (
 	<div className="services-profile animated-bg">
-		<div className="services-content max-w-5xl mx-auto px-2 animate__animated animate__fadeInDown">
+		<div className="services-content max-w-7xl mx-auto px-3 sm:px-4 animate__animated animate__fadeInDown">
 			<h2 className="text-3xl font-bold mb-8 text-blue-600 dark:text-blue-400">
 				Services
 			</h2>
-			<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6 xl:gap-8 items-stretch">
 				{services.map((service, i) => (
 					<div
 						key={i}
-						className="flex flex-col items-center 
+						className="flex flex-col items-center h-full
     bg-white/30 dark:bg-gray-800/40 
     rounded-xl shadow 
-    p-8 border border-white/30 dark:border-gray-700
+    p-6 xl:p-8 border border-white/30 dark:border-gray-700
     backdrop-blur-md
     hover:scale-105 hover:-translate-y-2 hover:shadow-2xl
     transition-all duration-500 animate__animated animate__zoomIn"

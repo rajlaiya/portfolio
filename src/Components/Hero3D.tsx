@@ -1,7 +1,7 @@
 // import './Hero3D.css'; // Assuming you have a separate CSS file for styles
 
 const Hero3D = () => (
-  <section className="relative bg-gradient-to-br from-blue-50 via-purple-100 to-pink-50 dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-950 dark:to-black py-20 px-8 min-h-screen flex items-center justify-center transition-colors duration-500 font-mono overflow-hidden" id="hero">
+  <section className="relative bg-gradient-to-br from-blue-50 via-purple-100 to-pink-50 dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-950 dark:to-black py-12 md:py-16 px-6 md:px-8 min-h-[calc(100vh-var(--nav-h))] max-h-[calc(100vh-var(--nav-h))] flex items-center justify-center transition-colors duration-500 font-mono overflow-hidden" id="hero">
     {/* Animated background blobs for dark mode */}
     <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-blue-900 dark:bg-blue-900 rounded-full blur-3xl opacity-40 animate-blob1 z-0" />
     <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-purple-900 dark:bg-purple-900 rounded-full blur-2xl opacity-30 animate-blob2 z-0" />
@@ -25,7 +25,7 @@ const Hero3D = () => (
         filter: saturate(1.4) brightness(1.13) drop-shadow(0 0 48px #6366f1cc);
       }
     `}</style>
-    <div className="container mx-auto px-6 py-12 flex flex-col items-center justify-center gap-10 z-10 relative max-w-4xl">
+  <div className="container mx-auto px-4 md:px-6 py-8 md:py-10 flex flex-col items-center justify-center gap-6 md:gap-8 z-10 relative max-w-4xl overflow-y-hidden">
       <div className="w-full text-center px-4 py-8">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 dark:text-white drop-shadow-lg font-['Fira_Code','JetBrains_Mono','monospace']">Hi, I'm <span className="text-blue-600 dark:text-blue-400">Raj Laiya</span></h2>
         <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-purple-600 dark:text-blue-400 font-['Fira_Code','JetBrains_Mono','monospace']">Front-end web Developer</h3>

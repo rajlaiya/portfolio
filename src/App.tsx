@@ -55,18 +55,26 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-      setShowPopup(true);
+      // Show cookie popup only if not previously accepted
+      const consent = localStorage.getItem('cookieConsent');
+      setShowPopup(!consent);
     }, 1500); // 1.5s loader
     return () => clearTimeout(timer);
   }, []);
 
+  const handleAcceptCookies = () => {
+    try { localStorage.setItem('cookieConsent', 'accepted'); } catch {}
+    setShowPopup(false);
+  };
+
   const SectionComponent = (sectionComponents as any)[section] || Hero3D;
+  const showFooter = section !== 'hero' && section !== 'about';
 
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 dark:bg-gray-900">
         <Loader />
-        <h1 className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 animate-pulse drop-shadow-lg text-center" style={{ marginTop: '5px' }}>
+        <h1 className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 animate-pulse drop-shadow-lg text-center mt-[5px]">
           Welcome to Raj Laiya Portfolio
         </h1>
       </div>
@@ -77,12 +85,14 @@ function App() {
     <div className={`min-h-screen font-sans transition-colors duration-300 ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'}`}>
       <Header theme={theme} setTheme={setTheme} />
       <main>
-        <SectionComponent />
-        <Poppop show={showPopup} onClose={() => setShowPopup(false)} />
+  <SectionComponent />
+  <Poppop show={showPopup} onClose={handleAcceptCookies} />
       </main>
-      <footer className="text-center py-6 text-gray-500 text-sm bg-white dark:bg-gray-800 border-t mt-10 dark:text-gray-400">
-        &copy; {new Date().getFullYear()} Raj laiya. All rights reserved.
-      </footer>
+      {showFooter && (
+        <footer className="text-center py-6 text-gray-500 text-sm bg-white dark:bg-gray-800 border-t mt-10 dark:text-gray-400">
+          &copy; {new Date().getFullYear()} Raj laiya. All rights reserved.
+        </footer>
+      )}
     </div>
   );
 }

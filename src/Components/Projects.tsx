@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 // import { FaL } from 'react-icons/fa6';
 
+type StackType = 'frontend' | 'backend' | 'both';
+
 const projects = [
 	{
 		title: 'Intern Management Portal',
@@ -12,6 +14,7 @@ const projects = [
 			'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D',
 		live: 'https://rajlaiya.github.io/INTERN_FORM_USING-JS-TS/',
 		status: 'done',
+		stack: 'frontend' as StackType,
 		mini: false,
 	},
 	{
@@ -24,6 +27,7 @@ const projects = [
 			'https://plus.unsplash.com/premium_photo-1681488350342-19084ba8e224?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZSUyMGNvbW1lcmNlfGVufDB8fDB8fHww',
 		live: 'https://rajlaiya.github.io/Shopwow/',
 		status: 'progress',
+		stack: 'both' as StackType,
 		mini: false,
 	},
 	{
@@ -43,6 +47,7 @@ const projects = [
 			'https://miro.medium.com/v2/resize:fit:1123/1*6C702o6cpNyLm27WLdZyjg.png',
 		live: 'https://rajlaiya-portfolio.netlify.app/',
 		status: 'progress',
+		stack: 'frontend' as StackType,
 		mini: false,
 	},
 	{
@@ -63,6 +68,7 @@ const projects = [
 			'https://media.istockphoto.com/id/1413672003/photo/driver-checking-car-sharing-app.webp?a=1&b=1&s=612x612&w=0&k=20&c=7pxu25okq3y_g-nZZyf_BaYEmkiPQFKlmf1GkVG1_es=',
 		live: '#',
 		status: 'progress',
+		stack: 'frontend' as StackType,
 		mini: false,
 	},
 	{
@@ -83,6 +89,7 @@ const projects = [
 			'https://media.istockphoto.com/id/1357667837/photo/woman-watching-tv-series-and-movies-on-online-streaming-service-at-home.webp?a=1&b=1&s=612x612&w=0&k=20&c=03mYubwYNPKAW9KCsGqk7ZiLRurCMpB_t5rrlU0XcCw=',
 		live: '#',
 		status: 'progress',
+		stack: 'frontend' as StackType,
 		mini: false,
 	},
 	{
@@ -102,6 +109,7 @@ const projects = [
 			'https://media.istockphoto.com/id/1491223480/photo/3d-illustration-of-happy-man-with-phone-and-headphones-listening-to-music-on-color-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=CC_GZ5yoSp0Iu8o9y46QhXzMcONCNr5U9lmlFtmpWkI=',
 		live: '#',
 		status: 'progress',
+		stack: 'frontend' as StackType,
 		mini: false,
 	},
 	{
@@ -113,6 +121,7 @@ const projects = [
 			'https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80',
 		live: 'https://foodieshome.netlify.app/about',
 		status: 'done',
+		stack: 'frontend' as StackType,
 		mini: false,
 	},
 	{
@@ -124,6 +133,7 @@ const projects = [
 			'https://drive.google.com/file/d/1gcsiR7nWqMx9J0OBnUjefa6jgxuNUAOy/view?usp=sharing',
 		live: 'https://food-point.my.canva.site/food-point-rl',
 		status: 'done',
+		stack: 'frontend' as StackType,
 		mini: true,
 	},
 	{
@@ -136,6 +146,7 @@ const projects = [
 			'https://images.unsplash.com/photo-1534768654272-e97681c3a2c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWdlfGVufDB8fDB8fHww',
 		live: 'https://funwithage.netlify.app/',
 		status: 'done',
+		stack: 'frontend' as StackType,
 		mini: true,
 	},
 	{
@@ -148,6 +159,7 @@ const projects = [
 			'https://plus.unsplash.com/premium_photo-1684330690142-2fbfce401fe7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FsY3VsYXRvciUyMHdpdGglMjBub3RlcGFkfGVufDB8fDB8fHww',
 		live: 'https://rajlaiya.github.io/SIMPLE-CALCULATOR-WITH-NOTEPAD/',
 		status: 'done',
+		stack: 'frontend' as StackType,
 		mini: true,
 	},
 	{
@@ -160,6 +172,7 @@ const projects = [
 			'https://media.istockphoto.com/id/1393245512/photo/temperature-contrast-minimal-thermometer-3d-render-illustration.webp?a=1&b=1&s=612x612&w=0&k=20&c=6vlMW5YaIgtQ6RIrIo-9wRRv4A2fHX55IABfEyt4U9M=',
 		live: 'https://temperatureswitch.netlify.app/',
 		status: 'done',
+		stack: 'frontend' as StackType,
 		mini: true,
 	},
 ];
@@ -200,6 +213,24 @@ const Counter = () => {
 	);
 };
 
+const stackLabel = (v: 'frontend' | 'backend' | 'both') => {
+	if (v === 'frontend') return 'Frontend';
+	if (v === 'backend') return 'Backend';
+	return 'Frontend & Backend';
+};
+
+const stackBadgeClass = (v: 'frontend' | 'backend' | 'both') => {
+	switch (v) {
+		case 'frontend':
+			return 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300';
+		case 'backend':
+			return 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300';
+		case 'both':
+		default:
+			return 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300';
+	}
+};
+
 const MiniProjects = () => (
 	<div className="mt-16">
 		<h3 className="text-5xl font-bold mb-6 text-green-600 dark:text-green-400">
@@ -218,7 +249,12 @@ const MiniProjects = () => (
 							alt={project.title}
 							className="h-40 w-full object-cover"
 						/>
-						<div className="p-6 flex-1 flex flex-col">
+												<div className="p-6 flex-1 flex flex-col">
+														{project.stack && (
+															<span className={`inline-block mb-3 px-2 py-1 rounded text-[11px] font-semibold ${stackBadgeClass(project.stack)}`}>
+																{stackLabel(project.stack)}
+															</span>
+														)}
 							<h4 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">
 								{project.title}
 							</h4>
@@ -288,7 +324,12 @@ const Projects = () => (
 								alt={project.title}
 								className="h-40 w-full object-cover"
 							/>
-							<div className="p-4 flex-1 flex flex-col">
+														<div className="p-4 flex-1 flex flex-col">
+																{project.stack && (
+																	<span className={`inline-block mb-2 px-2 py-1 rounded text-[11px] font-semibold ${stackBadgeClass(project.stack)}`}>
+																		{stackLabel(project.stack)}
+																	</span>
+																)}
 								<h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
 									{project.title}
 								</h3>
