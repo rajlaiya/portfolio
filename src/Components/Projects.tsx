@@ -51,51 +51,9 @@ const projects = [
 		mini: false,
 	},
 	{
-		title: 'Uber Clone',
+		title: 'Music',
 		description:
-			'A modern portfolio website template for developers, with dark mode, animations, and easy customization.',
-		tech: [
-			'React',
-			'Tailwind CSS',
-			'Framer Motion',
-			'JavaScript',
-			'EmailJS',
-			'three.js',
-			'unsplash',
-		],
-		github: '#',
-		image:
-			'https://media.istockphoto.com/id/1413672003/photo/driver-checking-car-sharing-app.webp?a=1&b=1&s=612x612&w=0&k=20&c=7pxu25okq3y_g-nZZyf_BaYEmkiPQFKlmf1GkVG1_es=',
-		live: '#',
-		status: 'progress',
-		stack: 'frontend' as StackType,
-		mini: false,
-	},
-	{
-		title: 'Netflix clone',
-		description:
-			'A Netflix clone that allows users to browse and watch movies and TV shows, with features like user authentication, watchlists, and recommendations.',
-		tech: [
-			'React',
-			'Tailwind CSS',
-			'Framer Motion',
-			'JavaScript',
-			'EmailJS',
-			'three.js',
-			'unsplash',
-		],
-		github: '#',
-		image:
-			'https://media.istockphoto.com/id/1357667837/photo/woman-watching-tv-series-and-movies-on-online-streaming-service-at-home.webp?a=1&b=1&s=612x612&w=0&k=20&c=03mYubwYNPKAW9KCsGqk7ZiLRurCMpB_t5rrlU0XcCw=',
-		live: '#',
-		status: 'progress',
-		stack: 'frontend' as StackType,
-		mini: false,
-	},
-	{
-		title: 'Spotify Music clone',
-		description:
-			'crated music website that allows users to search and play music tracks, create playlists, and discover new music.',
+			'Created music website that allows users to search and play music tracks, create playlists, and discover new music.',
 		tech: [
 			'React',
 			'Tailwind CSS',
@@ -109,6 +67,26 @@ const projects = [
 			'https://media.istockphoto.com/id/1491223480/photo/3d-illustration-of-happy-man-with-phone-and-headphones-listening-to-music-on-color-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=CC_GZ5yoSp0Iu8o9y46QhXzMcONCNr5U9lmlFtmpWkI=',
 		live: '#',
 		status: 'progress',
+		stack: 'frontend' as StackType,
+		mini: false,
+	},
+	{
+		title: 'Astha school Website',
+		description:
+			'A responsive website for Astha school, showcasing courses, faculty, and admission details with a modern design.',
+		tech: [
+			'Html',
+			'Tailwind CSS',
+			'Framer Motion',
+			'JavaScript',
+			'locomotive scroll',
+			'unsplash',
+		],
+		github: '#',
+		image:
+			'https://media.istockphoto.com/id/1491223480/photo/3d-illustration-of-happy-man-with-phone-and-headphones-listening-to-music-on-color-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=CC_GZ5yoSp0Iu8o9y46QhXzMcONCNr5U9lmlFtmpWkI=',
+		live: '#',
+		status: 'done',
 		stack: 'frontend' as StackType,
 		mini: false,
 	},
