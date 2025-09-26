@@ -25,7 +25,7 @@ const projects = [
 		github: '#',
 		image:
 			'https://media.istockphoto.com/id/2148297623/photo/clear-glass-honey-jar-mockup-for-packaging-label-3d-rendering-on-isolated-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=qtrLspNo_ldbb_NqAczaEX08dJ_3YmvB4w5uEKZJcAI=',
-		live: '#',
+		live: 'https://honeygo.netlify.app/',
 		status: 'done',
 		stack: 'both' as StackType,
 		mini: false,

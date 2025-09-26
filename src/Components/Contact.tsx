@@ -1,8 +1,4 @@
-import { useState } from 'react';
-import emailjs from '@emailjs/browser';
-import { EMAILJS_USER_ID, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID } from '../emailjs.config';
 import '../contact-animations.css';
-import '../coding-form.css';
 
 const icons = {
   name: 'https://img.icons8.com/ios-filled/50/3b82f6/user.png',
@@ -52,55 +48,9 @@ const contactLinks = [
   },
 ];
 
-const initialState = { name: '', email: '', message: '' };
-
-const validate = (values: typeof initialState) => {
-  const errors: Partial<typeof initialState> = {};
-  if (!values.name.trim()) errors.name = 'Name is required';
-  if (!values.email.trim() || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(values.email)) errors.email = 'Valid email is required';
-  if (!values.message.trim()) errors.message = 'Message is required';
-  return errors;
-};
-
 const Contact = () => {
-  const [values, setValues] = useState(initialState);
-  const [errors, setErrors] = useState<Partial<typeof initialState>>({});
-  const [submitted, setSubmitted] = useState(false);
-  const [sending, setSending] = useState(false);
-  const [sendError, setSendError] = useState<string | null>(null);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: undefined });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const errs = validate(values);
-    setErrors(errs);
-    setSendError(null);
-    if (Object.keys(errs).length === 0) {
-      setSending(true);
-      try {
-        await emailjs.send(
-          EMAILJS_SERVICE_ID,
-          EMAILJS_TEMPLATE_ID,
-          {
-            from_name: values.name,
-            from_email: values.email,
-            message: values.message,
-          },
-          EMAILJS_USER_ID
-        );
-        setSubmitted(true);
-        setValues(initialState);
-        setTimeout(() => setSubmitted(false), 3000);
-      } catch (err) {
-        setSendError('Failed to send. Please try again later.');
-      } finally {
-        setSending(false);
-      }
-    }
+  const handleGoogleFormClick = () => {
+    window.open('https://forms.google.com/your-form-id', '_blank');
   };
 
   return (
@@ -108,65 +58,32 @@ const Contact = () => {
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-3xl font-bold mb-6 text-white drop-shadow-lg contact-fade-in">Contact</h2>
         <div className="grid md:grid-cols-2 gap-10 items-start">
-          <form onSubmit={handleSubmit} className="coding-form bg-white/90 dark:bg-gray-900/90 p-8 flex flex-col gap-6 contact-fade-in animate__animated animate__fadeInLeft rounded-lg shadow-lg">
-            <label htmlFor="name" className="text-gray-700 dark:text-gray-200 font-semibold">Name</label>
-            <div className="relative flex items-center">
-              <img src={icons.name} alt="Name" className="w-6 h-6 absolute left-3 top-1/2 -translate-y-1/2 opacity-80" />
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Your Name"
-                value={values.name}
-                onChange={handleChange}
-                className={`pl-12 border rounded px-4 py-2 w-full focus:outline-none focus:border-blue-500 transition bg-white dark:bg-gray-800 text-gray-900 dark:text-white ${errors.name ? 'input-error border-red-500' : 'border-gray-300 dark:border-gray-600'}`}
-                autoComplete="off"
-              />
+          <div className="bg-white/90 dark:bg-gray-900/90 p-8 flex flex-col items-center gap-6 contact-fade-in animate__animated animate__fadeInLeft rounded-lg shadow-lg">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">Get In Touch</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-6">
+                Ready to discuss your project? Fill out my Google Form and I'll get back to you soon!
+              </p>
             </div>
-            {errors.name && <span className="text-red-500 text-xs ml-2">{errors.name}</span>}
-            <label htmlFor="email" className="text-gray-700 dark:text-gray-200 font-semibold">Email</label>
-            <div className="relative flex items-center">
-              <img src={icons.email} alt="Email" className="w-6 h-6 absolute left-3 top-1/2 -translate-y-1/2 opacity-80" />
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Your Email"
-                value={values.email}
-                onChange={handleChange}
-                className={`pl-12 border rounded px-4 py-2 w-full focus:outline-none focus:border-blue-500 transition bg-white dark:bg-gray-800 text-gray-900 dark:text-white ${errors.email ? 'input-error border-red-500' : 'border-gray-300 dark:border-gray-600'}`}
-                autoComplete="off"
-              />
-            </div>
-            {errors.email && <span className="text-red-500 text-xs ml-2">{errors.email}</span>}
-            <label htmlFor="message" className="text-gray-700 dark:text-gray-200 font-semibold">Message</label>
-            <div className="relative flex items-center">
-              <img src={icons.message} alt="Message" className="w-6 h-6 absolute left-3 top-4 opacity-80" />
-              <textarea
-                name="message"
-                id="message"
-                placeholder="Your Message"
-                rows={4}
-                value={values.message}
-                onChange={handleChange}
-                className={`pl-12 border rounded px-4 py-2 w-full focus:outline-none focus:border-blue-500 transition bg-white dark:bg-gray-800 text-gray-900 dark:text-white ${errors.message ? 'input-error border-red-500' : 'border-gray-300 dark:border-gray-600'}`}
-              />
-            </div>
-            {errors.message && <span className="text-red-500 text-xs ml-2">{errors.message}</span>}
             <button
-              type="submit"
-              className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white px-6 py-2 rounded font-semibold transition contact-fade-in shadow-lg hover:scale-105 active:scale-95"
-              disabled={sending}
+              onClick={handleGoogleFormClick}
+              className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 hover:from-blue-700 hover:via-purple-700 hover:to-pink-600 text-white font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transform"
             >
-              {sending ? 'Sending...' : 'Send Message'}
+              <div className="flex items-center gap-3">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Open Contact Form
+                <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-lg blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300 -z-10"></div>
             </button>
-            {sendError && (
-              <div className="text-red-400 text-center font-semibold mt-2 animate-bounce">{sendError}</div>
-            )}
-            {submitted && (
-              <div className="text-green-400 text-center font-semibold mt-2 animate-bounce">Thank you! Your message has been sent.</div>
-            )}
-          </form>
+            <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
+              Opens in a new tab • Quick & secure
+            </p>
+          </div>
           <div className="flex flex-col gap-6 contact-fade-in animate__animated animate__fadeInRight">
             <h3 className="text-2xl font-bold text-white mb-2 flex items-center gap-2 animate__animated animate__pulse animate__infinite">
               <svg className="w-7 h-7 text-blue-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21 10.5V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2h7.5" /></svg>
