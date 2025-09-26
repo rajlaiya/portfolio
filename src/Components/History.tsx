@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { FaGraduationCap, FaBriefcase, FaBookOpen, FaStar, FaUniversity, FaCertificate, FaRobot, FaCodeBranch, FaGlobe } from 'react-icons/fa';
+import { FaGraduationCap, FaBriefcase, FaBookOpen, FaUniversity, FaCertificate, FaRobot, FaCodeBranch, FaGlobe } from 'react-icons/fa';
 import './history-flipcard.css';
 
 const education = [
@@ -50,58 +49,7 @@ const currentLearning = [
 	{ label: 'Advanced TypeScript', icon: <FaCertificate className="text-yellow-500 text-xl" />, img: 'https://images.unsplash.com/photo-1605606722759-77da0b2f3d7d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWR2YW5jZSUyMHR5cGVzY3JpcHR8ZW58MHx8MHx8fDA%3D' },
 ];
 
-const typingTexts = [
-	'My Journey',
-	'Education',
-	'Experience',
-	'Current Learning',
-];
-
-const TypingTitle = () => {
-	const [text, setText] = useState('');
-	const [index, setIndex] = useState(0);
-	const [subIndex, setSubIndex] = useState(0);
-	const [blink, setBlink] = useState(true);
-	const [reverse, setReverse] = useState(false);
-
-	useEffect(() => {
-		if (index === typingTexts.length) return;
-		if (
-			subIndex === typingTexts[index].length + 1 &&
-			index !== typingTexts.length - 1 &&
-			!reverse
-		) {
-			setReverse(true);
-			setTimeout(() => {}, 500);
-			return;
-		}
-		if (subIndex === 0 && reverse) {
-			setReverse(false);
-			setIndex((prev) => prev + 1);
-			return;
-		}
-		const timeout = setTimeout(() => {
-			setSubIndex((prev) => prev + (reverse ? -1 : 1));
-			setText(typingTexts[index].substring(0, subIndex));
-		}, reverse ? 40 : 120);
-		return () => clearTimeout(timeout);
-	}, [subIndex, index, reverse]);
-
-	useEffect(() => {
-		const blinkTimeout = setInterval(() => {
-			setBlink((v) => !v);
-		}, 500);
-		return () => clearInterval(blinkTimeout);
-	}, []);
-
-	return (
-		<h2 className="text-3xl font-bold mb-8 text-blue-600 dark:text-blue-400 flex items-center gap-3">
-			<FaStar className="text-yellow-400" />
-			{text}
-			<span className={blink ? '' : 'opacity-0'}>|</span>
-		</h2>
-	);
-};
+// Removed typing animation in favor of a static heading
 
 const bgAnim = (
 	<div className="absolute inset-0 -z-10 overflow-hidden">
@@ -116,8 +64,10 @@ const History = () => (
 		id="history"
 	>
 		{bgAnim}
-		<div className="w-full max-w-7xl mx-auto px-1 md:px-4 relative z-10 flex flex-col gap-12">
-			<TypingTitle />
+        <div className="w-full max-w-7xl mx-auto px-1 md:px-4 relative z-10 flex flex-col gap-12">
+			<h2 className="text-3xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-cyan-400 to-purple-500 drop-shadow-sm tracking-tight">
+				My Journey
+			</h2>
 			{/* Education Section */}
 			<div className="p-8 rounded-2xl bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-900 shadow-2xl flex flex-col gap-4 animate-fade-in-up">
 				<h3 className="text-2xl font-extrabold text-blue-700 dark:text-blue-300 mb-4 flex items-center gap-3">

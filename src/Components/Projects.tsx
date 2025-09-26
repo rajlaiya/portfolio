@@ -18,15 +18,15 @@ const projects = [
 		mini: false,
 	},
 	{
-		title: 'Shopwow E-commerce',
+		title: 'Honey E-commerce',
 		description:
-			'A scalable e-commerce platform with secure payments, admin dashboard, and product recommendations.',
+			'A responsive e-commerce website for a fictional brand "Honey", featuring product listings, shopping cart, and checkout functionality.',
 		tech: ['Vuejs', 'Vite', 'Vuetify', 'typescript', 'EmailJS'],
-		github: 'https://github.com/rajlaiya/Shopwow',
+		github: '#',
 		image:
-			'https://plus.unsplash.com/premium_photo-1681488350342-19084ba8e224?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZSUyMGNvbW1lcmNlfGVufDB8fDB8fHww',
-		live: 'https://rajlaiya.github.io/Shopwow/',
-		status: 'progress',
+			'https://media.istockphoto.com/id/2148297623/photo/clear-glass-honey-jar-mockup-for-packaging-label-3d-rendering-on-isolated-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=qtrLspNo_ldbb_NqAczaEX08dJ_3YmvB4w5uEKZJcAI=',
+		live: '#',
+		status: 'done',
 		stack: 'both' as StackType,
 		mini: false,
 	},
@@ -50,26 +50,7 @@ const projects = [
 		stack: 'frontend' as StackType,
 		mini: false,
 	},
-	{
-		title: 'Music',
-		description:
-			'Created music website that allows users to search and play music tracks, create playlists, and discover new music.',
-		tech: [
-			'React',
-			'Tailwind CSS',
-			'Framer Motion',
-			'JavaScript',
-			'EmailJS',
-			'unsplash',
-		],
-		github: '#',
-		image:
-			'https://media.istockphoto.com/id/1491223480/photo/3d-illustration-of-happy-man-with-phone-and-headphones-listening-to-music-on-color-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=CC_GZ5yoSp0Iu8o9y46QhXzMcONCNr5U9lmlFtmpWkI=',
-		live: '#',
-		status: 'progress',
-		stack: 'frontend' as StackType,
-		mini: false,
-	},
+
 	{
 		title: 'Astha school Website',
 		description:
@@ -82,10 +63,10 @@ const projects = [
 			'locomotive scroll',
 			'unsplash',
 		],
-		github: '#',
+
 		image:
-			'https://media.istockphoto.com/id/1491223480/photo/3d-illustration-of-happy-man-with-phone-and-headphones-listening-to-music-on-color-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=CC_GZ5yoSp0Iu8o9y46QhXzMcONCNr5U9lmlFtmpWkI=',
-		live: '#',
+			'https://plus.unsplash.com/premium_photo-1677187301535-b46cec7b2cc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2Nob29sJTIwd2Vic2l0ZXxlbnwwfDB8MHx8fDA%3D',
+		live: 'https://aastha-sankul-jasdan.netlify.app/',
 		status: 'done',
 		stack: 'frontend' as StackType,
 		mini: false,
@@ -96,7 +77,7 @@ const projects = [
 			'A food discovery website that helps users find and share recipes, with features like meal planning, grocery lists, and user reviews.',
 		tech: ['Vue3', 'Typescript', 'AI', 'Vite', 'Tailwind CSS', 'Unsplash'],
 		image:
-			'https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80',
+			'https://media.istockphoto.com/id/1300640747/photo/online-food-delivery-mobile-app-shown-on-smart-phone-screen-hold-by-asian-man-hands-in-front.webp?a=1&b=1&s=612x612&w=0&k=20&c=x0_HbM_gn4BAuFKnERRYY953Ze8Amz026QCI20BwG40=',
 		live: 'https://foodieshome.netlify.app/about',
 		status: 'done',
 		stack: 'frontend' as StackType,
@@ -108,7 +89,7 @@ const projects = [
 			'A modern food delivery website design created using Canva, featuring a clean layout, vibrant images, and user-friendly navigation.',
 		tech: ['Canva', 'AI'],
 		image:
-			'https://drive.google.com/file/d/1gcsiR7nWqMx9J0OBnUjefa6jgxuNUAOy/view?usp=sharing',
+			'https://media.istockphoto.com/id/1248950610/photo/happy-food-delivery-man-on-bike-delivers-restaurant-order-to-beautiful-female-customer.webp?a=1&b=1&s=612x612&w=0&k=20&c=pw4BUQ33Lh-UQyEgrtoopEoTncrDoE8sNE0vh04ThgM=',
 		live: 'https://food-point.my.canva.site/food-point-rl',
 		status: 'done',
 		stack: 'frontend' as StackType,

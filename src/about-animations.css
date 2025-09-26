@@ -21,6 +21,26 @@
   animation: aboutFadeIn 1.2s cubic-bezier(.36,1.01,.32,1) both;
 }
 
+/* Slide-in variants */
+@keyframes aboutSlideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes aboutSlideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.about-slide-in-left { animation: aboutSlideInLeft 900ms cubic-bezier(.36,1.01,.32,1) both; }
+.about-slide-in-right { animation: aboutSlideInRight 900ms cubic-bezier(.36,1.01,.32,1) both; }
+
+/* Small delay utilities for sequencing */
+.about-delay-100 { animation-delay: .1s; }
+.about-delay-200 { animation-delay: .2s; }
+.about-delay-300 { animation-delay: .3s; }
+.about-delay-400 { animation-delay: .4s; }
+.about-delay-500 { animation-delay: .5s; }
+
 .skill-badge-animate {
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
