@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaInstagram, FaYoutube, FaWhatsapp, FaUserTie } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaYoutube, FaUserTie } from "react-icons/fa";
 import "./Socialmedia.css";
 
 const socialLinks = [
@@ -8,30 +8,21 @@ const socialLinks = [
     icon: <FaLinkedin size={40} />,
     desc: "Connect with me on LinkedIn for professional updates and networking.",
   },
-  {
-    name: "GitHub",
-    url: "https://github.com/rajlaiya",
-    icon: <FaGithub size={40} />,
-    desc: "Explore my open source projects and code contributions on GitHub.",
-  },
+
   {
     name: "Instagram",
     url: "https://instagram.com/yourhandle",
     icon: <FaInstagram size={40} />,
     desc: "Follow me on Instagram for creative and personal updates.",
   },
+
   {
     name: "Youtube",
     url: "https://youtube.com/rajlaiya",
     icon: <FaYoutube size={40} />,
     desc: "Subscribe to me on Youtube for Coding contents.",
   },
-  {
-    name: "Whatsapp",
-    url: "https://wa.me/+916355705208",
-    icon: <FaWhatsapp size={40} />,
-    desc: "Connect with me on Whatsapp for quick chats and updates.",
-  },
+  
   {
     name: "Freelancer",
     url: "#freelancer",
@@ -48,7 +39,7 @@ const Socialmedia = () => (
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tr from-green-200/30 to-blue-200/10 dark:from-green-900/20 dark:to-blue-900/10 rounded-full blur-2xl animate-pulse" />
     </div>
     <h2 className="text-4xl font-extrabold mb-12 text-blue-700 dark:text-blue-300 text-center drop-shadow-lg">Social Media</h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-5xl px-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 w-full max-w-7xl px-4">
       {socialLinks.map((link) => (
         <a
           key={link.name}

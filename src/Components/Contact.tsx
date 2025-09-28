@@ -50,7 +50,7 @@ const contactLinks = [
 
 const Contact = () => {
   const handleGoogleFormClick = () => {
-    window.open('https://forms.google.com/your-form-id', '_blank');
+    window.open('https://forms.gle/GMEXY757pXCYnX4n7', '_blank');
   };
 
   return (

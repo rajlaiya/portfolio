@@ -35,13 +35,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
 
-  scrollbar-width: thin;
-  scrollbar-color: #3b82f6 #e0e7ef;
+  /* Custom scrollbars for Webkit browsers */
 }
-html.dark body {
-  scrollbar-color: #6366f1 #22223b;
-}
-
+/* Custom scrollbars for Webkit browsers in dark mode */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

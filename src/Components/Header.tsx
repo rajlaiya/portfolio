@@ -78,11 +78,11 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
         </div>
         {/* Desktop Nav */}
         <nav className="space-x-6 items-center hidden md:flex">
-          <a href="#hero" className="hover:text-blue-600 dark:hover:text-blue-400 font-medium">Home</a>
-          <a href="#about" className="hover:text-blue-600 dark:hover:text-blue-400 font-medium">About</a>
-          <a href="#skills" className="hover:text-blue-600 dark:hover:text-blue-400 font-medium">Skills</a>
-          <a href="#projects" className="hover:text-blue-600 dark:hover:text-blue-400 font-medium">Projects</a>
-          <a href="#contact" className="hover:text-blue-600 dark:hover:text-blue-400 font-medium">Contact</a>
+          <a href="#hero" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Home</a>
+          <a href="#about" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">About</a>
+          <a href="#skills" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Skills</a>
+          <a href="#projects" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Projects</a>
+          <a href="#contact" className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">Contact</a>
           <div className="relative inline-block" ref={dropdownRef}>
             <button
               onClick={() => setDropdown((d) => !d)}
@@ -92,8 +92,8 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
             </button>
             {dropdown && (
               <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-900 rounded-lg shadow-lg z-50 border border-blue-100 dark:border-gray-800 animate-fade-in">
-                <a href="#services" className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-800 text-blue-700 dark:text-blue-200" onClick={() => setDropdown(false)}>Services</a>
-                <a href="#socialmedia" className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-800 text-blue-700 dark:text-blue-200" onClick={() => setDropdown(false)}>Socialmedia</a>
+                <a href="#services" className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-800 text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={() => setDropdown(false)}>Services</a>
+                <a href="#socialmedia" className="block px-4 py-2 hover:bg-blue-50 dark:hover:bg-gray-800 text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors" onClick={() => setDropdown(false)}>Socialmedia</a>
               </div>
             )}
           </div>
