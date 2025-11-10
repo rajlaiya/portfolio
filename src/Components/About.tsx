@@ -18,9 +18,9 @@ const skills = [
 ];
 
 const About = () => (
-  <section className="py-12 md:py-16 about-animated-bg w-full font-['Montserrat','Fira_Code','JetBrains_Mono','monospace']" id="about">
+  <section className="py-4 md:py-6 about-animated-bg w-full font-['Montserrat','Fira_Code','JetBrains_Mono','monospace'] overflow-hidden flex items-center" id="about" style={{maxHeight: '100vh'}}>
   <div className="mx-auto w-full max-w-7xl px-4 md:px-6">
-    <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-center">
+    <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
       {/* Profile image first on mobile */}
       <div className="flex md:hidden justify-center w-full about-slide-in-right about-delay-100 mb-8">
         <div className="relative p-[3px] rounded-full bg-gradient-to-tr from-blue-400 via-cyan-300 to-purple-500 shadow-[0_0_30px_rgba(59,130,246,0.45)] animate-[aboutFloat_6s_ease-in-out_infinite]">
@@ -29,45 +29,42 @@ const About = () => (
         </div>
       </div>
       <div className="flex-1 flex flex-col items-center md:items-start w-full px-0 md:px-0 about-slide-in-left about-delay-100">
-        <h2 className="text-4xl font-extrabold mb-4 text-white drop-shadow-lg tracking-tight about-title-font">About Me</h2>
-  <p className="text-gray-100 text-lg md:text-xl leading-relaxed mb-8 md:mb-10 w-full max-w-3xl about-paragraph-font">
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-white drop-shadow-lg tracking-tight about-title-font">About Me</h2>
+  <p className="text-gray-100 text-lg md:text-xl leading-relaxed mb-6 md:mb-8 w-full max-w-3xl about-paragraph-font">
           <span className="text-blue-200 font-bold">Fullstack Developer</span> with 1+ years of experience building web applications using modern frameworks.<br/>
           I love creating seamless user experiences and robust backend systems.<br/>
           My goal is to deliver <span className="text-blue-300 font-semibold">high-quality, maintainable code</span> and collaborate with teams to bring ideas to life.
         </p>
         <div className="flex flex-wrap gap-4 mt-2 w-full max-w-3xl">
           {skills.map((skill, i) => (
-            <span key={i} className="flex items-center gap-2 bg-white/80 dark:bg-gray-900/80 text-blue-700 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-mono shadow skill-badge-animate border border-blue-200 dark:border-blue-800">
-              <img src={skill.icon} alt={skill.name} className="w-6 h-6" />
+            <span key={i} className="flex items-center gap-2 bg-white/80 dark:bg-gray-900/80 text-blue-700 dark:text-blue-200 px-5 py-2.5 rounded-full text-base font-mono shadow skill-badge-animate border border-blue-200 dark:border-blue-800">
+              <img src={skill.icon} alt={skill.name} className="w-7 h-7" />
               <span className="skill-animate-text">{skill.name}</span>
             </span>
           ))}
         </div>
+        
+        {/* History Button - centered after skills */}
+        <div className="flex justify-center w-full max-w-3xl mt-4 md:mt-6">
+          <a
+            href="#history"
+            className="group relative flex items-center justify-center w-20 h-20 bg-blue-600/70 dark:bg-blue-500/70 hover:bg-blue-700/80 dark:hover:bg-blue-400/80 backdrop-blur-sm rounded-full shadow-lg transition-all duration-500 hover:scale-125 hover:shadow-2xl hover:shadow-blue-500/50 animate-pulse hover:animate-none border-2 border-blue-300/30 dark:border-blue-400/30 hover:border-blue-500/60 dark:hover:border-blue-300/60"
+            title="View History"
+          >
+            <FaHistory className="text-white text-3xl transition-all duration-500 group-hover:rotate-180 group-hover:scale-110 drop-shadow-lg" />
+            <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gray-900/90 dark:bg-gray-700/90 text-white text-xs px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap backdrop-blur-sm border border-gray-600/30 shadow-xl">
+              View History
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900/90 dark:border-t-gray-700/90"></div>
+            </div>
+            {/* Animated ring effect */}
+            <div className="absolute inset-0 rounded-full border-2 border-blue-400/50 animate-ping"></div>
+          </a>
+        </div>
       </div>
       {/* Profile image for desktop */}
-      <div className="hidden md:flex flex-1 justify-center w-full about-slide-in-right about-delay-200">
-        <div className="relative p-[4px] rounded-full bg-gradient-to-tr from-blue-400 via-cyan-300 to-purple-500 shadow-[0_0_40px_rgba(59,130,246,0.35)] animate-[aboutFloat_7s_ease-in-out_infinite]">
-          <img src={profileImg} alt="Profile" className="w-96 h-96 rounded-full object-cover profile-img-animate" />
-          <span className="pointer-events-none absolute inset-0 rounded-full ring-2 ring-white/60 dark:ring-white/20"></span>
-        </div>
+      <div className="hidden md:flex flex-1 justify-center items-start w-full about-slide-in-right about-delay-200 -mt-56">
+        <img src="/new_img.png" alt="Profile" className="w-full max-w-2xl h-auto object-contain animate-[aboutFloat_7s_ease-in-out_infinite]" style={{mixBlendMode: 'screen'}} />
       </div>
-    </div>
-    
-    {/* History Button */}
-  <div className="flex justify-center mt-12 md:mt-14 w-full">
-      <a
-        href="#history"
-        className="group relative flex items-center justify-center w-16 h-16 bg-blue-600/70 dark:bg-blue-500/70 hover:bg-blue-700/80 dark:hover:bg-blue-400/80 backdrop-blur-sm rounded-full shadow-lg transition-all duration-500 hover:scale-125 hover:shadow-2xl hover:shadow-blue-500/50 animate-pulse hover:animate-none border-2 border-blue-300/30 dark:border-blue-400/30 hover:border-blue-500/60 dark:hover:border-blue-300/60"
-        title="View History"
-      >
-        <FaHistory className="text-white text-2xl transition-all duration-500 group-hover:rotate-180 group-hover:scale-110 drop-shadow-lg" />
-        <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gray-900/90 dark:bg-gray-700/90 text-white text-xs px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap backdrop-blur-sm border border-gray-600/30 shadow-xl">
-          View History
-          <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900/90 dark:border-t-gray-700/90"></div>
-        </div>
-        {/* Animated ring effect */}
-        <div className="absolute inset-0 rounded-full border-2 border-blue-400/50 animate-ping"></div>
-      </a>
     </div>
   </div>
   </section>

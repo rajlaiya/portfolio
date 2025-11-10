@@ -39,13 +39,13 @@ const contactLinks = [
     href: 'https://github.com/rajlaiya',
     color: 'hover:bg-gray-200 dark:hover:bg-gray-800',
   },
-  {
-    label: 'Linktree',
-    icon: icons.linktree,
-    value: 'linktr.ee/rajlaiya',
-    href: 'https://linktr.ee/raj_laiya?utm_source=linktree_admin_share',
-    color: 'hover:bg-purple-100 dark:hover:bg-purple-900',
-  },
+  // {
+  //   label: 'Linktree',
+  //   icon: icons.linktree,
+  //   value: 'linktr.ee/rajlaiya',
+  //   href: 'https://linktr.ee/raj_laiya?utm_source=linktree_admin_share',
+  //   color: 'hover:bg-purple-100 dark:hover:bg-purple-900',
+  // },
 ];
 
 const Contact = () => {
