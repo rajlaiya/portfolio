@@ -55,19 +55,8 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
     <header ref={headerRef} className="sticky top-0 z-50 backdrop-blur-md bg-white/55 dark:bg-gray-900/45 border-b border-black/5 dark:border-white/10 shadow-sm transition-colors duration-300">
       <div className="w-full flex justify-between items-center py-4 px-6">
         <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">Raj laiya</span>
-        {/* Mobile/Theme Buttons */}
+        {/* Mobile Menu Button */}
         <div className="flex items-center gap-2 md:hidden ml-auto">
-          <button
-            aria-label="Toggle Theme"
-            className="p-2 rounded-full bg-blue-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-gray-700 transition shadow-md w-12 h-12 flex items-center justify-center mr-4"
-            onClick={toggleTheme}
-          >
-            {theme === 'light' ? (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.66 5.66l-.71-.71M4.05 4.93l-.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" /></svg>
-            )}
-          </button>
           <button
             className="p-2 rounded-full bg-blue-100 dark:bg-gray-800 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-gray-700 transition shadow-md w-12 h-12 flex items-center justify-center"
             aria-label="Open menu"
@@ -117,6 +106,7 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
         <>
           <div className="mobile-sidebar-backdrop" onClick={() => setMobileMenu(false)} />
           <nav className="mobile-sidebar-menu animate-slide-in-right" onClick={e => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setMobileMenu(false)}>×</button>
             <a href="#hero" onClick={() => setMobileMenu(false)}>Home</a>
             <a href="#about" onClick={() => setMobileMenu(false)}>About</a>
             <a href="#skills" onClick={() => setMobileMenu(false)}>Skills</a>
@@ -127,6 +117,19 @@ const Header: React.FC<HeaderProps> = ({ theme, setTheme }) => {
           </nav>
         </>
       )}
+      
+      {/* Floating Theme Button - Mobile Only */}
+      <button
+        aria-label="Toggle Theme"
+        className="mobile-floating-theme-btn md:hidden"
+        onClick={toggleTheme}
+      >
+        {theme === 'light' ? (
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.66 5.66l-.71-.71M4.05 4.93l-.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+        ) : (
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" /></svg>
+        )}
+      </button>
     </header>
   );
 };

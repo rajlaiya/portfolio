@@ -1,7 +1,8 @@
 import '../about-animations.css';
 import './About.css'; // Import the new CSS file
-import profileImg from '../assets/IMG_Raj.jpg'; // Correct import
 import { FaHistory } from 'react-icons/fa';
+import { useEffect, useRef } from 'react';
+import newImg from '../assets/new img.png';
 
 const skills = [
   { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
@@ -17,17 +18,40 @@ const skills = [
   // { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
 ];
 
-const About = () => (
-  <section className="py-4 md:py-6 about-animated-bg w-full font-['Montserrat','Fira_Code','JetBrains_Mono','monospace'] overflow-hidden flex items-center" id="about" style={{maxHeight: '100vh'}}>
+const About = () => {
+  const imageRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of the element is visible
+        rootMargin: '0px 0px -100px 0px' // Trigger slightly before element enters viewport
+      }
+    );
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    return () => {
+      if (imageRef.current) {
+        observer.unobserve(imageRef.current);
+      }
+    };
+  }, []);
+
+  return (
+  <section className="py-4 md:py-6 about-animated-bg w-full font-['Montserrat','Fira_Code','JetBrains_Mono','monospace'] overflow-hidden flex items-center about-section-container" id="about">
   <div className="mx-auto w-full max-w-7xl px-4 md:px-6">
     <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
-      {/* Profile image first on mobile */}
-      <div className="flex md:hidden justify-center w-full about-slide-in-right about-delay-100 mb-8">
-        <div className="relative p-[3px] rounded-full bg-gradient-to-tr from-blue-400 via-cyan-300 to-purple-500 shadow-[0_0_30px_rgba(59,130,246,0.45)] animate-[aboutFloat_6s_ease-in-out_infinite]">
-          <img src={profileImg} alt="Profile" className="w-56 h-56 max-w-xs mx-auto rounded-full object-cover profile-img-animate" />
-          <span className="pointer-events-none absolute inset-0 rounded-full ring-2 ring-white/60 dark:ring-white/20"></span>
-        </div>
-      </div>
+      {/* Text content - shows first on mobile */}
       <div className="flex-1 flex flex-col items-center md:items-start w-full px-0 md:px-0 about-slide-in-left about-delay-100">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-white drop-shadow-lg tracking-tight about-title-font">About Me</h2>
   <p className="text-gray-100 text-lg md:text-xl leading-relaxed mb-6 md:mb-8 w-full max-w-3xl about-paragraph-font">
@@ -61,13 +85,15 @@ const About = () => (
           </a>
         </div>
       </div>
-      {/* Profile image for desktop */}
-      <div className="hidden md:flex flex-1 justify-center items-start w-full about-slide-in-right about-delay-200 -mt-56">
-        <img src="/new_img.png" alt="Profile" className="w-full max-w-2xl h-auto object-contain animate-[aboutFloat_7s_ease-in-out_infinite]" style={{mixBlendMode: 'screen'}} />
+      
+      {/* Profile image - shows after scrolling on mobile, on right side on desktop */}
+      <div ref={imageRef} className="flex-1 flex justify-center items-start w-full about-slide-in-right about-delay-200 md:-mt-56">
+        <img src={newImg} alt="Profile" className="about-profile-img w-full max-w-2xl h-auto object-contain" />
       </div>
     </div>
   </div>
   </section>
-);
+  );
+};
 
 export default About;

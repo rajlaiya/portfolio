@@ -2,6 +2,23 @@
   font-family: 'Fira Code', 'JetBrains Mono', monospace;
 }
 
+/* Profile image with blend mode */
+.about-profile-img {
+  mix-blend-mode: screen;
+}
+
+/* About section container */
+.about-section-container {
+  max-height: 100vh;
+}
+
+/* Mobile: remove max height constraint */
+@media (max-width: 768px) {
+  .about-section-container {
+    max-height: none;
+  }
+}
+
 /* Subtle floating animation for profile wrapper */
 @keyframes aboutFloat {
   0% { transform: translateY(0); }

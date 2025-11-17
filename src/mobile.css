@@ -75,48 +75,69 @@
   header nav {
     display: none !important;
   }
-  /* Sidebar menu styles */
+  /* Sidebar menu styles - Game Menu style */
   .mobile-sidebar-menu {
     display: flex !important;
     flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: auto;
-    min-width: 160px;
-    max-width: 80vw;
-    height: 100vh;
-    background: #18181b;
+    position: fixed !important;
+    top: calc(175% + 10px) !important;
+    left: 50% !important;
+    transform: translate(-50%, 0) scale(1) !important;
+    width: 85vw !important;
+    max-width: 400px !important;
+    height: auto !important;
+    max-height: 60vh !important;
+    background: linear-gradient(135deg, 
+                rgb(15, 23, 42) 0%, 
+                rgb(30, 41, 59) 50%,
+                rgb(15, 23, 42) 100%) !important;
     color: #fff;
-    box-shadow: -2px 0 24px #0006;
-    z-index: 100;
-    padding: 2.5rem 1.2rem 1.5rem 1.2rem;
-    gap: 1.5rem;
-    overflow-y: auto;
-    transform: translateX(0);
-    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
-    /* Animated background */
-    background-image:
-      radial-gradient(ellipse at 30% 20%, rgba(59,130,246,0.18) 0%, transparent 70%),
-      radial-gradient(ellipse at 80% 80%, rgba(236,72,153,0.13) 0%, transparent 70%),
-      radial-gradient(ellipse at 60% 10%, rgba(139,92,246,0.12) 0%, transparent 70%);
-    animation: sidebarBgMove 12s linear infinite alternate;
-  }
-  @keyframes sidebarBgMove {
-    0% {
-      background-position: 30% 20%, 80% 80%, 60% 10%;
-    }
-    100% {
-      background-position: 40% 30%, 70% 60%, 50% 20%;
-    }
+    border-radius: 16px !important;
+    border: 2px solid rgba(96, 165, 250, 0.5) !important;
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.3),
+                0 0 30px rgba(96, 165, 250, 0.2),
+                0 20px 60px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    z-index: 100 !important;
+    padding: 3rem 1.5rem 1.5rem 1.5rem !important;
+    gap: 0.8rem;
+    overflow: hidden !important;
+    overflow-y: auto !important;
+    transition: all 0.3s cubic-bezier(.4,0,.2,1) !important;
   }
   .mobile-sidebar-menu a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    color: #2563eb;
-    margin-bottom: 0.5rem;
+    color: #e2e8f0;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 0;
     text-decoration: none;
-    transition: color 0.2s;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+    background: linear-gradient(135deg, 
+                rgba(30, 58, 138, 0.3) 0%, 
+                rgba(30, 58, 138, 0.15) 100%);
+    border: 1.5px solid rgba(96, 165, 250, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .mobile-sidebar-menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(96, 165, 250, 0.2) 50%, 
+                transparent 100%);
+    transition: left 0.5s ease;
   }
   .mobile-sidebar-menu a:last-child {
     margin-bottom: 0;
@@ -124,24 +145,105 @@
   .mobile-sidebar-menu a:active,
   .mobile-sidebar-menu a:focus,
   .mobile-sidebar-menu a:hover {
-    color: #7c3aed;
+    background: linear-gradient(135deg, 
+                rgba(59, 130, 246, 0.4) 0%, 
+                rgba(37, 99, 235, 0.4) 100%);
+    border-color: rgba(96, 165, 250, 0.8);
+    color: #ffffff;
+    transform: translateX(5px);
+    box-shadow: 0 0 20px rgba(96, 165, 250, 0.4),
+                inset 0 0 20px rgba(96, 165, 250, 0.1);
+  }
+  
+  .mobile-sidebar-menu a:hover::before {
+    left: 100%;
+  }
+  
+  .mobile-sidebar-menu a:active {
+    transform: translateX(2px) scale(0.98);
   }
   .mobile-sidebar-menu .close-btn {
     position: absolute;
-    top: 1.2rem;
-    right: 1.2rem;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #2563eb;
+    top: 0.8rem;
+    right: 0.8rem;
+    background: linear-gradient(135deg, 
+                rgba(239, 68, 68, 0.3) 0%, 
+                rgba(185, 28, 28, 0.3) 100%);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(239, 68, 68, 0.4);
+    border-radius: 6px;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #fca5a5;
     cursor: pointer;
     z-index: 101;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
   }
-  .mobile-sidebar-backdrop {
+  .mobile-sidebar-menu .close-btn:hover {
+    background: linear-gradient(135deg, 
+                rgba(239, 68, 68, 0.5) 0%, 
+                rgba(185, 28, 28, 0.5) 100%);
+    border-color: rgba(239, 68, 68, 0.8);
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+  }
+  
+  /* Floating Theme Toggle Button - Bottom Right */
+  .mobile-floating-theme-btn {
     position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.35);
-    z-index: 99;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, 
+                rgba(250, 204, 21, 0.9) 0%, 
+                rgba(217, 119, 6, 0.9) 100%);
+    border: 2px solid rgba(250, 204, 21, 0.6);
+    box-shadow: 0 4px 20px rgba(250, 204, 21, 0.4),
+                0 0 30px rgba(250, 204, 21, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 50;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .mobile-floating-theme-btn:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 6px 30px rgba(250, 204, 21, 0.6),
+                0 0 40px rgba(250, 204, 21, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    border-color: rgba(250, 204, 21, 0.9);
+  }
+  
+  .mobile-floating-theme-btn:active {
+    transform: scale(0.95);
+  }
+  
+  .mobile-floating-theme-btn svg {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+  
+  .mobile-sidebar-backdrop {
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(40px) brightness(0.6) !important;
+    -webkit-backdrop-filter: blur(40px) brightness(0.6) !important;
+    z-index: 99 !important;
+    transition: opacity 0.3s ease !important;
     display: block !important;
   }
   #resume {
@@ -211,6 +313,125 @@
   }
   #hero canvas {
     height: 180px !important;
+  }
+  
+  /* About section mobile styles */
+  #about {
+    padding-top: 2rem !important;
+    padding-bottom: 0 !important; /* Remove bottom padding to connect with bottom */
+    min-height: auto !important;
+    overflow: hidden !important;
+  }
+  
+  #about .flex.flex-col.md\:flex-row {
+    flex-direction: column !important;
+    min-height: auto !important;
+    gap: 0 !important; /* No gap between sections */
+  }
+  
+  #about .flex-1:first-child {
+    order: 1 !important;
+    margin-bottom: 0 !important;
+    min-height: auto !important;
+  }
+  
+  #about .flex-1:last-child,
+  #about .flex-1.justify-center {
+    order: 2 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    opacity: 1 !important; /* Always visible on mobile */
+    transform: translateY(0) !important;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out !important;
+    padding: 0 !important; /* Remove padding to extend to edges */
+    width: 100vw !important; /* Full viewport width */
+    margin-left: calc(-50vw + 50%) !important; /* Center and extend to edges */
+    margin-right: calc(-50vw + 50%) !important;
+  }
+  
+  /* Image becomes visible when scrolled into view */
+  #about .flex-1:last-child.is-visible,
+  #about .flex-1.justify-center.is-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  #about h2 {
+    font-size: 1.75rem !important;
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  #about p {
+    font-size: 0.95rem !important;
+    text-align: center !important;
+    padding: 0 0.5rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  #about .flex.flex-wrap.gap-4 {
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    margin-top: 0.75rem !important; /* Reduced */
+    margin-bottom: 0 !important; /* No bottom margin */
+  }
+  
+  #about .skill-badge-animate {
+    font-size: 0.75rem !important;
+    padding: 0.4rem 0.8rem !important;
+  }
+  
+  #about .skill-badge-animate img {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+  }
+  
+  /* Reduce gap around history button */
+  #about .flex.justify-center {
+    margin-top: 0.25rem !important; /* Minimal top margin */
+    margin-bottom: 0 !important; /* No gap before image */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  #about img[alt="Profile"] {
+    width: 100% !important;
+    min-width: 100vw !important; /* Force full viewport width */
+    height: auto !important;
+    min-height: 80vh !important; /* Increased to 80% of viewport height */
+    max-height: 100vh !important; /* Maximum full viewport height */
+    display: block !important;
+    margin: 0 auto !important;
+    margin-top: -15vh !important; /* Crop from top to show face */
+    opacity: 1 !important;
+    visibility: visible !important;
+    object-fit: cover !important; /* Cover to fill the space */
+    object-position: center top !important; /* Position from top */
+  }
+  
+  /* Ensure the image container is visible */
+  #about .about-profile-img {
+    display: block !important;
+    width: 100% !important;
+    min-width: 100vw !important;
+    min-height: 80vh !important; /* Match image height */
+    opacity: 1 !important;
+    visibility: visible !important;
+    overflow: hidden !important; /* Hide the cropped top part */
+  }
+  
+  /* History button mobile sizing */
+  #about a[href="#history"] {
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  #about a[href="#history"] svg {
+    font-size: 1.5rem !important;
   }
 }
 
