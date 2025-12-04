@@ -80,8 +80,8 @@ function App() {
 
   return (
     <div className={`min-h-screen font-sans transition-colors duration-300 ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'}`}>
-      <Header theme={theme} setTheme={setTheme} />
-      <main>
+        <Header theme={theme} setTheme={setTheme} />
+        <main className="pt-[var(--nav-h)]">
   <SectionComponent />
   <Poppop show={showPopup} onClose={handleAcceptCookies} />
       </main>
