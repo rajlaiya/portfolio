@@ -31,6 +31,32 @@ const projects = [
 		mini: false,
 	},
 	{
+		title: 'Tech-Company Website',
+		description:
+			'A modern and responsive website for a tech company, showcasing services, team members, and contact information.',
+		tech: ['ReactJS', 'React router', 'Vite'],
+		github: '#',
+		image:
+			'#',
+		live: '#',
+		status: 'done',
+		stack: 'frontend' as StackType,
+		mini: false,
+	},
+	{
+		title: 'Visual-edits Website',
+		description:
+			'A creative portfolio website for a visual editing agency, highlighting past projects and client testimonials.',
+		tech: ['ReactJS', 'React router', 'Vite'],
+		github: '#',
+		image:
+			'src/assets/visual edits.png',
+		live: 'https://visualedit.netlify.app/',
+		status: 'done',
+		stack: 'frontend' as StackType,
+		mini: false,
+	},
+	{
 		title: 'DevPortfolio',
 		description:
 			'A modern portfolio website template for developers, with dark mode, animations, and easy customization.',
@@ -46,13 +72,13 @@ const projects = [
 		image:
 			'https://miro.medium.com/v2/resize:fit:1123/1*6C702o6cpNyLm27WLdZyjg.png',
 		live: 'https://rajlaiya-portfolio.netlify.app/',
-		status: 'progress',
+		status: 'Done',
 		stack: 'frontend' as StackType,
 		mini: false,
 	},
 
 	{
-		title: 'Astha school Website',
+		title: 'School Website',
 		description:
 			'A responsive website for Astha school, showcasing courses, faculty, and admission details with a modern design.',
 		tech: [
