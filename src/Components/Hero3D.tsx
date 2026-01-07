@@ -1,5 +1,5 @@
 // import './Hero3D.css'; // Assuming you have a separate CSS file for styles
-import resumePDF from '../Doduments/RAJ_LAIYA_RESUME_2025.pdf';
+import resumePDF from '../Doduments/RAJ_LAIYA_RESUME_2026.pdf';
 
 const Hero3D = () => (
   <section className="relative bg-gradient-to-br from-blue-50 via-purple-100 to-pink-50 dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-950 dark:to-black py-12 md:py-16 px-6 md:px-8 min-h-[calc(100vh-var(--nav-h))] max-h-[calc(100vh-var(--nav-h))] flex items-center justify-center transition-colors duration-500 font-mono overflow-hidden" id="hero">
@@ -34,7 +34,7 @@ const Hero3D = () => (
         <div className="flex flex-wrap gap-10 mb-8 justify-center">
           <a href="#contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-700 transition font-['Fira_Code','JetBrains_Mono','monospace']">Contact Me</a>
           <a href="#projects" className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-green-700 transition font-['Fira_Code','JetBrains_Mono','monospace']">Projects</a>
-          <a href={resumePDF} download="RAJ_LAIYA_RESUME_2025.pdf" className="inline-block bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-900 transition font-['Fira_Code','JetBrains_Mono','monospace']">Resume</a>
+          <a href={resumePDF} download="RAJ_LAIYA_RESUME_2026.pdf" className="inline-block bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-900 transition font-['Fira_Code','JetBrains_Mono','monospace']">Resume</a>
         </div>
       </div>
     
